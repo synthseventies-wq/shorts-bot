@@ -144,13 +144,13 @@ def main():
             print(f"{s['id']}: {toplam:.1f} sn")
 
         liste = gecici / "liste.txt"
-        liste.write_text("".join(f"file '{p}'\n" for p in parca_listesi))
+        liste.write_text("".join(f"file '{p.as_posix()}'\n" for p in parca_listesi), encoding="utf-8")
         gorsel = gecici / "gorsel.mp4"
         calistir(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(liste), "-c", "copy", str(gorsel)])
 
         if ses_listesi and len(ses_listesi) == len(segmentler):
             sliste = gecici / "ses.txt"
-            sliste.write_text("".join(f"file '{p.resolve()}'\n" for p in ses_listesi))
+            sliste.write_text("".join(f"file '{p.resolve().as_posix()}'\n" for p in ses_listesi), encoding="utf-8")
             calistir([
                 "ffmpeg", "-y", "-i", str(gorsel), "-f", "concat", "-safe", "0", "-i", str(sliste),
                 "-filter_complex", "[0:a][1:a]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14[a]",
