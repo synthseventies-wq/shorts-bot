@@ -1,0 +1,544 @@
+[
+  {
+    "id": "S00",
+    "baslik": "Kanca",
+    "sahneler": [
+      {
+        "bas": 4400,
+        "son": 4470
+      },
+      {
+        "bas": 1937,
+        "son": 2010
+      }
+    ],
+    "metin": "Üç lise öğrencisi, bir gece terk edilmiş bir arazide yerin metrelerce altına iniyor ve oradan bambaşka insanlar olarak çıkıyor. Önce eşyaları düşünce gücüyle hareket ettiriyorlar, sonra uçmayı öğreniyorlar. Ancak bu güç, içlerinden birinin elinde zamanla bütün bir şehri yerle bir edecek bir silaha dönüşüyor."
+  },
+  {
+    "id": "S01",
+    "baslik": "Giriş",
+    "sahneler": [
+      {
+        "bas": 96,
+        "son": 118
+      }
+    ],
+    "metin": "Herkese selam, kanalıma hoş geldiniz. Bugün sizlere 2012 yılında gösterime giren Chronicle adlı Amerikan bilim kurgu filmini, yönetmen versiyonuyla birlikte anlatacağım. Video spoiler içermektedir. Bu tür içerikler hoşunuza gidiyorsa videoyu beğenebilir ve abone olabilirsiniz."
+  },
+  {
+    "id": "S02",
+    "baslik": "Andrew'un evi",
+    "sahneler": [
+      {
+        "bas": 37,
+        "son": 77
+      },
+      {
+        "bas": 96,
+        "son": 144
+      }
+    ],
+    "metin": "Film, Andrew Detmer adındaki içine kapanık bir lise öğrencisinin kamerasından izlediğimiz görüntülerle başlar. Sabahın yedi buçuğunda sarhoş olan babası Richard, Andrew'un kilitli kapısını yumruklamaktadır. Andrew ise kendine yeni bir kamera almıştır ve bundan sonra hayatındaki her şeyi kaydetmeye kararlıdır. Annesi Karen ağır bir hastalıkla yatağa bağlıdır ve Andrew'un evdeki tek sığınağı odur. Eskiden itfaiyeci olan babası ise iş kazası sonrası sigortadan aldığı parayla geçinmekte ve öfkesini her fırsatta oğlundan çıkarmaktadır."
+  },
+  {
+    "id": "S03",
+    "baslik": "Matt ve okul",
+    "sahneler": [
+      {
+        "bas": 145,
+        "son": 204
+      },
+      {
+        "bas": 215,
+        "son": 240
+      }
+    ],
+    "metin": "Andrew'u okula her sabah kuzeni Matt Garetty götürür. Matt, Schopenhauer okuyup felsefeden bahsetmeyi seven, kendini biraz fazla ciddiye alan bir gençtir. Okulda ise Andrew'un kimsesi yoktur. Öğle yemeğini tribünlerde tek başına yer ve elindeki kamera yüzünden herkesin alay konusu olur."
+  },
+  {
+    "id": "S04",
+    "baslik": "Zorbalık ve parti daveti",
+    "sahneler": [
+      {
+        "bas": 260,
+        "son": 299
+      },
+      {
+        "bas": 303,
+        "son": 349
+      },
+      {
+        "bas": 385,
+        "son": 395
+      }
+    ],
+    "metin": "Koridorda Sean ve arkadaşları kamerasını elinden alıp onunla dalga geçer. Matt, Andrew'u o akşam terk edilmiş bir arazide yapılacak partiye davet eder. Ancak bir şartı vardır: kamerasını evde bırakmalıdır, çünkü insanlar bunu tuhaf buluyordur. Andrew eve döndüğünde ise babası onu bir kez daha hırpalar."
+  },
+  {
+    "id": "S05",
+    "baslik": "Parti",
+    "sahneler": [
+      {
+        "bas": 427,
+        "son": 454
+      },
+      {
+        "bas": 484,
+        "son": 564
+      }
+    ],
+    "metin": "Andrew yine de kamerasıyla partiye gelir. Matt ondan uzak durmaya çalışırken, okulun blog yazan kızı Casey ile laf dalaşına girer. Andrew ise yanlış kişinin sevgilisini çektiği gerekçesiyle tartaklanır ve partiden ayrılarak bir ağacın altında tek başına oturup ağlamaya başlar."
+  },
+  {
+    "id": "S06",
+    "baslik": "Steve ile tanışma",
+    "sahneler": [
+      {
+        "bas": 580,
+        "son": 663
+      }
+    ],
+    "metin": "Bu sırada okulun en popüler öğrencisi ve öğrenci başkanlığı adayı Steve Montgomery yanına gelir. Steve ve Matt ormanın içinde garip bir şey bulmuşlardır ve bunu kayda almak için Andrew'un kamerasına ihtiyaçları vardır. Andrew başta isteksiz olsa da sonunda onlarla gitmeyi kabul eder."
+  },
+  {
+    "id": "S07",
+    "baslik": "Delik",
+    "sahneler": [
+      {
+        "bas": 663,
+        "son": 750
+      },
+      {
+        "bas": 750,
+        "son": 792
+      }
+    ],
+    "metin": "Yerde, içinden tuhaf bir uğultu yükselen büyük bir delik vardır. Üçü sırayla aşağı inerler. Duvarlar dümdüzdür ve yerin kırk, kırk beş metre altına inmişlerdir. Andrew nefes alamadığını, buradan çıkmak istediğini söyler. Ancak Matt'in merakı ağır basar."
+  },
+  {
+    "id": "S08",
+    "baslik": "Kristal",
+    "sahneler": [
+      {
+        "bas": 792,
+        "son": 853
+      }
+    ],
+    "metin": "Tünelin sonunda karşılarına parlayan, renk değiştiren devasa bir kristal yapı çıkar. Yapı onlar yaklaştıkça yüksek bir ses çıkarmaya başlar. Andrew'un kamerası bozulmaya başlar, Steve'in burnu kanar ve görüntü bir anda kararır."
+  },
+  {
+    "id": "S09",
+    "baslik": "Üç hafta sonra",
+    "sahneler": [
+      {
+        "bas": 861,
+        "son": 941
+      }
+    ],
+    "metin": "Görüntüler geri geldiğinde aradan birkaç hafta geçmiştir. Üç arkadaş bir odada birbirine top atmaktadır. Ancak bu sıradan bir oyun değildir. Atılan top, Matt'in yüzüne çarpmadan hemen önce havada durur. O gece yerin altında bir şey olmuş ve üçü de telekinezi, yani düşünce gücüyle eşyaları hareket ettirme yeteneği kazanmıştır."
+  },
+  {
+    "id": "S10",
+    "baslik": "Güçleri keşfetmek",
+    "sahneler": [
+      {
+        "bas": 941,
+        "son": 1013
+      }
+    ],
+    "metin": "Burunları her denemede kanamaktadır, ancak her geçen gün daha iyi olurlar. Legolarla küçük kuleler yapar, birbirlerine meydan okurlar. Üçü arasında daha önce hiç olmayan bir arkadaşlık başlamıştır. Matt bu yeteneğin bir kas gibi çalıştığını, kullandıkça güçlendiğini düşünür."
+  },
+  {
+    "id": "S11",
+    "baslik": "Delik kapanıyor",
+    "sahneler": [
+      {
+        "bas": 1044,
+        "son": 1092
+      }
+    ],
+    "metin": "Gündüz delik olan yere geri döndüklerinde, girişin tamamen çöktüğünü görürler. Polis bölgeyi şeritle kapatmıştır. O gece ne olduğunu, kristalin ne olduğunu artık asla öğrenemeyeceklerdir."
+  },
+  {
+    "id": "S12",
+    "baslik": "Andrew ve Steve",
+    "sahneler": [
+      {
+        "bas": 1096,
+        "son": 1191
+      }
+    ],
+    "metin": "Steve, Andrew'u arabasıyla eve bırakırken ikisi ilk kez gerçekten konuşur. Andrew babasının içkiyi bırakamadığını anlatır. Steve ise kendi ailesinde de sorunlar olduğunu, annesinin babasını aldattığını düşündüğünü itiraf eder. Okulun en popüler çocuğu ile en yalnız çocuğu arasında beklenmedik bir yakınlık doğmuştur."
+  },
+  {
+    "id": "S13",
+    "baslik": "Anne",
+    "sahneler": [
+      {
+        "bas": 1192,
+        "son": 1275
+      }
+    ],
+    "metin": "Evde ise durum her geçen gün kötüleşmektedir. Andrew annesinin ilaçları için eczaneyi arar, ancak ilacın fiyatını karşılayamazlar. Annesinin yanına oturup onu kameraya çeker. Kadın oğluna, \"sen bundan daha güçlüsün\" der ve bunu kendisi için tekrar etmesini ister. Andrew de bu cümleyi fısıldar. Bu cümle filmin geri kalanında ona yön verecektir."
+  },
+  {
+    "id": "S14",
+    "baslik": "Güçler büyüyor",
+    "sahneler": [
+      {
+        "bas": 1276,
+        "son": 1400
+      }
+    ],
+    "metin": "Andrew artık diğerlerinden çok daha hızlı gelişmektedir. Bir gece yatağını havaya kaldırdığını ve burnunun bile kanamadığını anlatır. Matt ise ona bu gücün sorumluluk getirdiğini hatırlatmaya çalışır. Ancak üçü de henüz gücün eğlenceli tarafındadır."
+  },
+  {
+    "id": "S15",
+    "baslik": "Şakalar",
+    "sahneler": [
+      {
+        "bas": 1401,
+        "son": 1452
+      },
+      {
+        "bas": 1563,
+        "son": 1710
+      }
+    ],
+    "metin": "Bir oyuncakçıda oyuncak ayıyı uçurup küçük bir kızı korkutur, otoparkta bir kadının arabasını başka bir yere taşıyıp şaşkınlığını izleyerek gülerler. Andrew yaptığı her şakada biraz daha cesaretlenir. Kamerasını artık elinde tutmaz, düşünce gücüyle havada süzdürerek kendisini çeker."
+  },
+  {
+    "id": "S16",
+    "baslik": "Kaza",
+    "sahneler": [
+      {
+        "bas": 1710,
+        "son": 1791
+      }
+    ],
+    "metin": "Ancak bir akşam yolda arkalarından sürekli selektör yapan bir kamyonetle karşılaşırlar. Andrew elini kaldırır ve kamyoneti yoldan çıkarır. Araç bariyerleri aşarak göle düşer. Steve hemen suya atlar ve sürücüyü güçleriyle dışarı çıkararak hayatını kurtarır."
+  },
+  {
+    "id": "S17",
+    "baslik": "Kurallar",
+    "sahneler": [
+      {
+        "bas": 1812,
+        "son": 1873
+      }
+    ],
+    "metin": "Matt öfkeyle Andrew'a birini hastanelik ettiğini söyler. Bu olaydan sonra Matt üç kural koyar. Canlılar üzerinde gücü kullanmak yok. Öfkeyle kullanmak yok. Ve halkın içinde kullanmak yok. Andrew isteksizce kabul eder, ancak Matt'in ona emir vermesi canını sıkmıştır."
+  },
+  {
+    "id": "S18",
+    "baslik": "Uçmak",
+    "sahneler": [
+      {
+        "bas": 1922,
+        "son": 2020
+      }
+    ],
+    "metin": "Bir gün Steve, Matt ve Andrew'u bir tarlaya çağırır ve onlara inanılmaz bir şey gösterir. Steve uçabiliyordur. Üçü birlikte denerler ve kısa sürede bulutların arasında süzülmeye başlarlar."
+  },
+  {
+    "id": "S19",
+    "baslik": "Uçak",
+    "sahneler": [
+      {
+        "bas": 2029,
+        "son": 2211
+      }
+    ],
+    "metin": "Bulutların üzerinde top oynar, birbirlerine şakalar yaparlar. Ancak bir anda içinden geçtikleri bulutun arkasından bir yolcu uçağı belirir ve Steve kıl payı ölümden kurtulur. Yere indiklerinde korkuları yerini büyük bir coşkuya bırakır. Tarih yazdıklarını, şimdiye kadar hiçbir insanın yapamadığı bir şeyi yaptıklarını haykırırlar."
+  },
+  {
+    "id": "S20",
+    "baslik": "En güzel gün",
+    "sahneler": [
+      {
+        "bas": 2267,
+        "son": 2387
+      }
+    ],
+    "metin": "O gece üçü birlikte uzanırken Andrew, bu günün hayatının en güzel günü olduğunu söyler. Planlar yapmaya başlarlar. Andrew'un hep görmek istediği yer Tibet'tir ve üçü bir gün oraya uçarak gitmeye söz verirler. Filmin belki de en masum anı budur."
+  },
+  {
+    "id": "S21",
+    "baslik": "Matt ve Casey",
+    "sahneler": [
+      {
+        "bas": 2408,
+        "son": 2512
+      }
+    ],
+    "metin": "Matt bu sırada Casey ile arasını düzeltmeye çalışmaktadır. Onun blogundaki yardım kampanyasına bağış yapar. Değiştiğini, artık eskisi gibi biri olmadığını anlatmaya çalışsa da işi elinde yüzüne bulaştırır."
+  },
+  {
+    "id": "S22",
+    "baslik": "Yetenek gösterisi daveti",
+    "sahneler": [
+      {
+        "bas": 2518,
+        "son": 2655
+      }
+    ],
+    "metin": "Steve ise Andrew'a sahip çıkmaya devam eder. Andrew ona daha önce hiç gerçek bir arkadaşı olmadığını, Matt'le bile lisede ayrıldıklarını söyler. Steve onu okulun yetenek gösterisine katılmaya ikna eder. Andrew'un yeteneği yoktur, ancak artık süper güçleri vardır."
+  },
+  {
+    "id": "S23",
+    "baslik": "Baba şüpheleniyor",
+    "sahneler": [
+      {
+        "bas": 2689,
+        "son": 2735
+      }
+    ],
+    "metin": "Evde babası, oğlundaki değişimi fark etmeye başlamıştır. Matt'in onu okula götürmediğini bilmektedir ve bir şey sakladığını düşünür. Gözünün Andrew'un üzerinde olduğunu söyleyerek onu tehdit eder."
+  },
+  {
+    "id": "S24",
+    "baslik": "Gösteri",
+    "sahneler": [
+      {
+        "bas": 2761,
+        "son": 2950
+      }
+    ],
+    "metin": "Yetenek gösterisinde Andrew sahneye çıkar ve sihirbazlık numarası gibi görünen telekinezi gösterileri yapar. Eşyaları havada dans ettirir, ip üzerinde yürür. Salon ayağa kalkar. Andrew hayatında ilk kez alkışlanmaktadır."
+  },
+  {
+    "id": "S25",
+    "baslik": "Popülerlik",
+    "sahneler": [
+      {
+        "bas": 2961,
+        "son": 3109
+      }
+    ],
+    "metin": "Gösterinin ardından herkes onu bir partiye davet eder. Andrew artık popülerdir. Monica adında bir kız onunla ilgilenir ve ikisi üst kata çıkarlar. Matt ise sonunda Casey ile yakınlaşma fırsatı yakalar."
+  },
+  {
+    "id": "S26",
+    "baslik": "Rezillik",
+    "sahneler": [
+      {
+        "bas": 3171,
+        "son": 3221
+      }
+    ],
+    "metin": "Ancak Andrew'un mutluluğu uzun sürmez. Fazla içtiği için kızın üzerine kusar ve kız ona ucube diye bağırarak odadan çıkar. Andrew herkesin önünde rezil olmuştur. Steve onu teselli etmeye çalışsa da Andrew öfkeyle onu kovar."
+  },
+  {
+    "id": "S27",
+    "baslik": "Babayla kavga",
+    "sahneler": [
+      {
+        "bas": 3257,
+        "son": 3350
+      }
+    ],
+    "metin": "Eve döndüğünde babası onu beklemektedir. Andrew'un, annesi ölürken kameraya yüzlerce dolar harcadığını, kendisinin bir yüz karası olduğunu söyleyip ona vurur. Ancak Andrew artık eski Andrew değildir. Gücünü kullanarak babasını duvara savurur ve onu ezip geçebileceğini söyler."
+  },
+  {
+    "id": "S28",
+    "baslik": "Bağlantı",
+    "sahneler": [
+      {
+        "bas": 3379,
+        "son": 3405
+      }
+    ],
+    "metin": "Tam bu sırada kilometrelerce uzakta Casey ile olan Matt'in burnu aniden kanamaya başlar. Üçü arasında güçlerden gelen görünmez bir bağ vardır ve biri kontrolü kaybettiğinde diğerleri bunu hissetmektedir."
+  },
+  {
+    "id": "S29",
+    "baslik": "Fırtına",
+    "sahneler": [
+      {
+        "bas": 3415,
+        "son": 3469
+      }
+    ],
+    "metin": "Andrew öfkeyle bir fırtına bulutunun içine uçar. Onu hisseden Steve de yanına gelir ve onu sakinleştirmeye çalışır. Ancak Andrew dinlemez ve Steve'e bağırarak gitmesini söyler. Bir anda bir yıldırım düşer ve Steve hayatını kaybeder."
+  },
+  {
+    "id": "S30",
+    "baslik": "Cenaze",
+    "sahneler": [
+      {
+        "bas": 3507,
+        "son": 3611
+      }
+    ],
+    "metin": "Steve'in cenazesinde Matt, Andrew'un kamerasıyla mezarları çektiğini görür ve öfkelenir. Kayıtlarda hiç fırtına yokken Steve'e nasıl yıldırım çarptığını sorar. Ancak Andrew cevap vermez."
+  },
+  {
+    "id": "S31",
+    "baslik": "İtiraf",
+    "sahneler": [
+      {
+        "bas": 3611,
+        "son": 3651
+      }
+    ],
+    "metin": "Sonrasında Andrew'u Steve'in mezarı başında görürüz. Ona ne yaptığını bilmediğini, kontrolünü kaybettiğini ve çok üzgün olduğunu söyler. Bu güç artık onun bir parçası olmaya başlamıştır."
+  },
+  {
+    "id": "S32",
+    "baslik": "Uç yırtıcı",
+    "sahneler": [
+      {
+        "bas": 3705,
+        "son": 3802
+      }
+    ],
+    "metin": "Okulda Andrew'a yıllardır zorbalık yapan Wayne'in dişlerini düşünce gücüyle söker. Sonra kameraya geçip, internette evrim hakkında okuduklarını anlatır. Ekosistemdeki en güçlü canlıya uç yırtıcı denir. Bir aslan bir geyiği öldürdüğünde suçluluk duymaz. Andrew artık kendini bu şekilde görmektedir."
+  },
+  {
+    "id": "S33",
+    "baslik": "Matt ile kopuş",
+    "sahneler": [
+      {
+        "bas": 3811,
+        "son": 3834
+      }
+    ],
+    "metin": "Matt onunla yüzleşir ve kuralları çiğnediğini söyler. Andrew ise ondan daha güçlü olduğunu, onun aptal kurallarına uymayacağını söyleyerek Matt'i hayatından çıkarır."
+  },
+  {
+    "id": "S34",
+    "baslik": "Eczane",
+    "sahneler": [
+      {
+        "bas": 3869,
+        "son": 3910
+      }
+    ],
+    "metin": "Annesinin nefes alması giderek zorlaşmaktadır. Andrew eczaneye gider, ancak ilaçların tutarı yedi yüz elli dolardır ve Andrew'un bu parası yoktur."
+  },
+  {
+    "id": "S35",
+    "baslik": "Soygun",
+    "sahneler": [
+      {
+        "bas": 3977,
+        "son": 4080
+      }
+    ],
+    "metin": "Bunun üzerine Andrew babasının eski itfaiyeci kıyafetlerini giyer ve yüzünü maskeyle gizleyerek önce mahalledeki bir grup serseriyi, sonra bir benzin istasyonunu soyar. Ancak istasyondaki görevli ona silah doğrultur. Andrew'un gücü kontrolden çıkar, benzin tankları patlar ve Andrew alevlerin içinde kalır."
+  },
+  {
+    "id": "S36",
+    "baslik": "Hastane",
+    "sahneler": [
+      {
+        "bas": 4116,
+        "son": 4246
+      }
+    ],
+    "metin": "Ağır yaralı Andrew hastaneye kaldırılır ve polis gözetimine alınır. Başında bekleyen babası ona, annesinin dün gece öldüğünü söyler. Kadın, Richard oğlunu ararken evde tek başına ölmüştür. Ve babası bunun suçunu Andrew'a yükler. \"Senin yüzünden annen öldü\" diye bağırır."
+  },
+  {
+    "id": "S37",
+    "baslik": "Haber",
+    "sahneler": [
+      {
+        "bas": 4252,
+        "son": 4333
+      }
+    ],
+    "metin": "Tam bu sırada Matt, Casey'nin doğum gününde yine burnu kanayarak sarsılır ve Andrew'un başının dertte olduğunu hisseder. Televizyonda Seattle'daki bir hastanede patlama olduğu haberi geçmektedir. Matt hemen oraya koşar."
+  },
+  {
+    "id": "S38",
+    "baslik": "Hastanenin önü",
+    "sahneler": [
+      {
+        "bas": 4340,
+        "son": 4400
+      }
+    ],
+    "metin": "Andrew hastanenin duvarını patlatmış ve babasını havada tutarak aşağı bırakmak üzeredir. Matt son anda yetişir ve Richard'ı yakalayarak kurtarır. Ancak Andrew artık durdurulamaz haldedir."
+  },
+  {
+    "id": "S39",
+    "baslik": "Seattle'da çatışma",
+    "sahneler": [
+      {
+        "bas": 4400,
+        "son": 4569
+      }
+    ],
+    "metin": "İki kuzen, Seattle'ın gökyüzünde çatışmaya başlar. Andrew arabaları, otobüsleri fırlatır ve binaların içinden geçer. Matt ona bunu bırakmasını, birlikte buradan uçup gidebileceklerini, bir aile olabileceklerini söyler. Ancak Andrew herkesin zayıf, kendisinin ise herkesten güçlü olduğunu söyler. Ve tek bir cümle kurar: \"Ben uç yırtıcıyım.\""
+  },
+  {
+    "id": "S40",
+    "baslik": "Yaralı Andrew",
+    "sahneler": [
+      {
+        "bas": 4630,
+        "son": 4701
+      }
+    ],
+    "metin": "Çatışmanın ortasında yaralanıp düşen Andrew'u Matt bulur ve onu buradan çıkaracağına söz verir. Ancak polisler etraflarını sarar ve Andrew'a ateş açılır."
+  },
+  {
+    "id": "S41",
+    "baslik": "Kontrolsüz öfke",
+    "sahneler": [
+      {
+        "bas": 4734,
+        "son": 4818
+      }
+    ],
+    "metin": "Vurulan Andrew'un öfkesi şehri yerle bir etmeye başlar. Etrafındaki her şey havaya kalkar, polis araçları savrulur. Matt ona yalvarır, onlara zarar vermemesini ister. Ancak Andrew onu duymamaktadır."
+  },
+  {
+    "id": "S42",
+    "baslik": "Son",
+    "sahneler": [
+      {
+        "bas": 4818,
+        "son": 4863
+      }
+    ],
+    "metin": "Matt başka çare kalmadığını anlar. Gözyaşları içinde yakındaki bir heykelin mızrağını düşünce gücüyle söker ve kuzenine fırlatır. Andrew oracıkta hayatını kaybeder. Matt ise polisler gelmeden oradan uçarak kaybolur."
+  },
+  {
+    "id": "S43",
+    "baslik": "Tibet",
+    "sahneler": [
+      {
+        "bas": 4910,
+        "son": 5013
+      }
+    ],
+    "metin": "Bir süre sonra Matt'i Tibet'te, karlı dağların arasında görürüz. Andrew'un kamerasını yere yerleştirir ve ona konuşur. Yaptığı şey için çok üzgün olduğunu, onun kötü biri olmadığını bildiğini söyler. Artık insanlara yardım edecek ve o delikte ne olduğunu ne kadar sürerse sürsün öğrenecektir. Bunu Andrew ve Steve için yapacaktır. Sonra Andrew'a seni seviyorum der, kendisini Tibet'e getirdiğini söyler ve hoşça kal diyerek havalanır."
+  },
+  {
+    "id": "S44",
+    "baslik": "Yorum",
+    "sahneler": [
+      {
+        "bas": 2267,
+        "son": 2315
+      },
+      {
+        "bas": 4554,
+        "son": 4569
+      }
+    ],
+    "metin": "Chronicle, süper güç hikâyesini bir kahramanın değil, yalnızlık, şiddet ve yoksullukla büyümüş bir gencin gözünden anlatıyor. Andrew'u kötüye dönüştüren şey aslında güç değil, ona hiç el uzatmamış bir dünya. Her şeyi karakterlerin kendi kameralarından izlememiz de bunu güçlendiriyor. Andrew'un kamerası, dünyayla arasına koyduğu bir duvar gibi. Filmin sonunda o kamerayı Tibet'e bırakan Matt ise, kuzeninin hiç yaşayamadığı huzuru onun yerine görmeye gidiyor."
+  },
+  {
+    "id": "S45",
+    "baslik": "Kapanış",
+    "sahneler": [
+      {
+        "bas": 2029,
+        "son": 2070
+      }
+    ],
+    "metin": "Videonun sonuna geldik. Videoyu izlediğiniz için çok teşekkür ederim. Yorumlarda incelemesinin ya da özetinin gelmesini istediğiniz filmleri belirtebilirsiniz. Aynı zamanda videoda gördüğünüz eksikleri eleştirirseniz çok sevinirim. Beni desteklemek için videoyu beğenebilir ve kanala abone olabilirsiniz."
+  }
+]
