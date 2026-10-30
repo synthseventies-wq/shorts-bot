@@ -1,26 +1,26 @@
-"""segmentler.json + film dosyasından kurgu videosu üretir.
+"""Cümle başına çekim taslağı + ElevenLabs sesinden kurgu videosu üretir.
 
-Her segmentte görüntü şöyle akar: 2-4 klip (her biri 2.5-4.5 sn, en fazla 5 sn), ardından
-yavaşça zoom in ya da zoom out yapan durağan bir kare, sonra yine klipler...
-Klipler ve kareler yalnızca o segmentin sahne aralıklarından seçilir.
+Görüntü sesten türetilir, hiçbir süre tahmin edilmez:
+- Segment sesleri (S00.wav ...) tek bir ana ses dosyasında, örnek sayısı kesin olarak birleştirilir.
+- Her cümlenin penceresi seslendir.py'nin çıkardığı zaman damgalarından gelir; görüntü geçişleri
+  cümleler arasındaki duraklamalara düşer.
+- Kesim noktaları ana ses zaman çizelgesinde mutlak kare numarası olarak hesaplanır, yuvarlama
+  hatası birikmez. Sonda görüntü ile ses arasındaki fark 1 kareden büyükse araç hata verir.
 
-Kendiliğinden çözülen sorunlar:
-- Klipler çekim geçişlerine ve siyah karelere denk gelmez (ffmpeg sahne/siyah tespiti).
-- Durağan kare, aynı çekimdeki birkaç aday arasından en net olanı seçilir.
-- Siyah bantlar (letterbox) kırpılır, görüntü 1920x1080'i tamamen doldurur.
-- Çıktı filmin kendi kare hızıyla üretilir (24 -> 30 dönüşümündeki takılma olmaz).
-- Sahne aralığı anlatıma yetmezse aynı klip tekrarlanmaz; araya daha çok durağan kare girer
-  ve uyarı yazılır.
+Her cümle penceresi yalnızca o cümleye bağlanan çekimlerle dolar: 2-4 klip (4-6 sn, en fazla
+7 sn), ardından yavaşça zoom in ya da zoom out yapan durağan kare, sonra yine klipler...
+Bir cümledeki her çekim en az 2.2 sn ekranda kalır; sığmayan fazla çekimler atılır ve uyarı yazılır.
+Filmin sesi kullanılmaz (Content ID en kolay sesi yakalar).
 
-Kullanım (sessiz önizleme):
+Kullanım:
+  python pipeline/katalog.py ...          (çekim kataloğu)
+  python pipeline/seslendir.py ...        (ses + zaman damgaları)
   python pipeline/kurgu.py --film filmler/chronicle.mp4 \
-      --segmentler ozetler/chronicle/segmentler.json \
+      --taslak ozetler/chronicle/cumle_taslak.md --ses ozetler/chronicle/ses \
       --sadece S00,S01,S02 --cikti ozetler/chronicle/ornek_1dk.mp4
-
---ses klasöründe S00.mp3, S01.mp3 ... varsa süreler oradan alınır ve anlatım eklenir.
-Yoksa süre kelime sayısından tahmin edilir.
 """
 import argparse
+import hashlib
 import json
 import random
 import re
@@ -28,14 +28,19 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import wave
 from collections import Counter
+from fractions import Fraction
 from pathlib import Path
 
 GENISLIK, YUKSEKLIK = 1920, 1080
-KELIME_SANIYE = 2.3  # ses yokken süre tahmini (Türkçe anlatım hızı)
 EN_KISA_CEKIM = 1.5  # bundan kısa çekimler klip için kullanılmaz
 SAHNE_ESIGI = 0.3  # ffmpeg sahne değişim eşiği
 ZOOM = 0.12  # durağan karede toplam zoom miktarı (%12)
+EN_UZUN_PARCA = 7.0  # bir klip ya da durağan kare bundan uzun olmaz (sn)
+EN_KISA_PAY = 2.2  # bir cümledeki her çekim ekranda en az bu kadar kalır (sn)
+KODLAMA = ["-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p",
+           "-video_track_timescale", "24000", "-an"]
 
 
 def calistir(komut, yakala=False):
@@ -60,11 +65,6 @@ def film_bilgisi(film):
     akis = bilgi["streams"][0]
     return {"fps": akis["r_frame_rate"], "genislik": akis["width"],
             "yukseklik": akis["height"], "sure": float(bilgi["format"]["duration"])}
-
-
-def sure(dosya):
-    return float(calistir(["ffprobe", "-v", "error", "-show_entries", "format=duration",
-                           "-of", "csv=p=0", str(dosya)]).strip())
 
 
 def siyah_bant_bul(film, toplam_sure):
@@ -131,70 +131,12 @@ def cekimler(bas, son, analiz):
     return parcalar
 
 
-def plan_yap(toplam, ayar, rnd):
-    """Süreyi klip/kare parçalarına böler."""
-    parcalar, gecen = [], 0.0
-    sonraki_kare = rnd.randint(ayar.min_klip, ayar.max_klip)
-    while toplam - gecen > 0.05:
-        kare = sonraki_kare == 0
-        uzunluk = rnd.uniform(ayar.min_sure, ayar.max_sure)
-        kalan = toplam - gecen - uzunluk
-        if kalan < ayar.min_sure:  # küçük artık kalmasın: bu parçaya ekle ya da ikiye böl
-            uzunluk = toplam - gecen if toplam - gecen <= 5.0 else (toplam - gecen) / 2
-        parcalar.append({"tur": "kare" if kare else "klip", "sure": uzunluk})
-        gecen += uzunluk
-        sonraki_kare = rnd.randint(ayar.min_klip, ayar.max_klip) if kare else sonraki_kare - 1
-    return parcalar
-
-
-def kaynak_ata(parcalar, cekim_listesi, segment_id):
-    """Her parçaya, çekim sınırını aşmayan ve tekrar etmeyen bir kaynak zamanı atar."""
-    havuz = sum(b - a for a, b in cekim_listesi)
-    gereken = sum(p["sure"] for p in parcalar if p["tur"] == "klip")
-    if havuz < gereken:
-        print(f"  UYARI {segment_id}: sahne aralığı {havuz:.0f} sn, klipler için {gereken:.0f} sn "
-              "gerekiyor; bazı klipler durağan kareye çevrildi. Aralığı genişletmeyi düşünün.")
-
-    def konum_zamani(konum):
-        for a, b in cekim_listesi:
-            if konum <= b - a:
-                return a + konum
-            konum -= b - a
-        return cekim_listesi[-1][1]
-
-    kullanilan = []  # (bas, son) — tekrar etmesin
-    for i, p in enumerate(parcalar):
-        hedef = konum_zamani(havuz * (i + 0.5) / len(parcalar))
-        sirali = sorted(cekim_listesi, key=lambda c: 0 if c[0] <= hedef <= c[1] else
-                        min(abs(c[0] - hedef), abs(c[1] - hedef)))
-        if p["tur"] == "klip":
-            for a, b in sirali:
-                if b - a < p["sure"]:
-                    continue
-                bos = [(x, y) for x, y in cikar([(a, b)], kullanilan) if y - x >= p["sure"]]
-                if not bos:
-                    continue
-                x, y = min(bos, key=lambda c: 0 if c[0] <= hedef <= c[1] else
-                           min(abs(c[0] - hedef), abs(c[1] - hedef)))
-                bas = max(x, min(hedef - p["sure"] / 2, y - p["sure"]))
-                p["kaynak"] = bas
-                kullanilan.append((bas, bas + p["sure"]))
-                break
-            else:
-                p["tur"] = "kare"
-        if p["tur"] == "kare":
-            a, b = sirali[0]
-            p["cekim"] = (a, b)
-            p["kaynak"] = min(max(hedef, a), b)
-    return parcalar
-
-
 def en_net_kare(film, cekim, gecici, ad):
-    """Çekimin ortasındaki 5 aday kareden en netini seçer (netlik ~ JPEG dosya boyutu)."""
+    """Aralıktaki 5 aday kareden en netini seçer (netlik ~ JPEG dosya boyutu)."""
     a, b = cekim
     en_iyi, en_boy = None, -1
     for i in range(5):
-        t = a + (b - a) * (0.2 + 0.15 * i)
+        t = a + (b - a) * (0.1 + 0.2 * i)
         jpg = gecici / f"{ad}_aday{i}.jpg"
         calistir(["ffmpeg", "-y", "-v", "error", "-ss", f"{t:.3f}", "-i", str(film),
                   "-frames:v", "1", "-vf", "scale=640:-2", "-q:v", "3", str(jpg)])
@@ -212,77 +154,211 @@ def goruntu_filtresi(kirpma):
             f"crop={GENISLIK}:{YUKSEKLIK},setsar=1")
 
 
-def klip_uret(film, p, hedef, kirpma, fps, film_ses):
-    calistir([
-        "ffmpeg", "-y", "-v", "error", "-ss", f"{p['kaynak']:.3f}", "-t", f"{p['sure']:.3f}",
-        "-i", str(film), "-f", "lavfi", "-t", f"{p['sure']:.3f}", "-i", "anullsrc=r=48000:cl=stereo",
-        "-filter_complex",
-        f"[0:v]{goruntu_filtresi(kirpma)},fps={fps}[v];"
-        f"[0:a]volume={film_ses},aresample=48000[fa];[fa][1:a]amix=inputs=2:duration=longest[a]",
-        "-map", "[v]", "-map", "[a]", "-t", f"{p['sure']:.3f}",
-        "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p",
-        "-c:a", "aac", "-ar", "48000", "-ac", "2", str(hedef),
-    ])
+def kare_no(t, fps):
+    return round(Fraction(t).limit_denominator(1_000_000) * fps)
 
 
-def kare_uret(film, p, hedef, kirpma, fps, yakinlas, gecici):
+def ana_ses_yap(segmentler, ses, ara, hedef):
+    """Segment WAV'larını araya sessizlik koyarak tek dosyada birleştirir; segment başlangıçlarını döndürür."""
+    baslangiclar, toplam, oran = [], 0, None
+    with wave.open(str(hedef), "wb") as cikis:
+        for s in segmentler:
+            with wave.open(str(ses / f"{s['id']}.wav"), "rb") as w:
+                if oran is None:
+                    oran = w.getframerate()
+                    cikis.setparams(w.getparams())
+                elif w.getframerate() != oran:
+                    sys.exit(f"{s['id']}.wav örnekleme hızı farklı.")
+                baslangiclar.append(toplam / oran)
+                veri = w.readframes(w.getnframes())
+                sessizlik = b"\x00" * (round(ara * oran) * w.getsampwidth() * w.getnchannels())
+                cikis.writeframes(veri + sessizlik)
+                toplam += len(veri + sessizlik) // (w.getsampwidth() * w.getnchannels())
+    return baslangiclar, toplam / oran
+
+
+def cekim_araligi(c, katalog):
+    """Taslaktaki çekim referansını filmde mutlak (bas, son) aralığına çevirir."""
+    if c["id"] not in katalog:
+        sys.exit(f"{c['id']} katalogda yok; önce katalog.py ile o bölümü kataloglayın.")
+    k = katalog[c["id"]]
+    if k["aciklama"].startswith("YASAK"):
+        sys.exit(f"{c['id']} yasaklı çekim: {k['aciklama']}")
+    if not c["ofset"]:
+        return k["bas"], k["son"]
+    a, b = k["bas"] + c["ofset"][0], min(k["bas"] + c["ofset"][1], k["son"])
+    if b - a < 0.5:
+        sys.exit(f"{c['id']}@{c['ofset']} çekimin dışında (çekim {k['sure']} sn).")
+    return max(a, k["bas"]), b
+
+
+def tekrar_kontrol(segmentler, katalog):
+    """Taslağın tamamında aynı film saniyelerinin iki ayrı cümlede kullanılıp kullanılmadığını bulur."""
+    kullanim = []
+    for s in segmentler:
+        for ci, cumle in enumerate(s["cumleler"], 1):
+            for c in cumle["cekimler"]:
+                a, b = cekim_araligi(c, katalog)
+                kullanim.append((a, b, f"{s['id']} cümle {ci} ({c['id']})"))
+    kullanim.sort()
+    uyarilar = []
+    for i, (a, b, ad) in enumerate(kullanim):
+        for a2, b2, ad2 in kullanim[i + 1:]:
+            if a2 >= b:
+                break
+            ortak = min(b, b2) - a2
+            if ortak > 0.5 and ad.split(" (")[0] != ad2.split(" (")[0]:
+                uyarilar.append(f"  TEKRAR: {ad} ile {ad2} filmin {ortak:.1f} sn'sini paylaşıyor")
+    return uyarilar
+
+
+def pencere_parcala(kare_sayisi, araliklar, fps, ayar, durum, etiket):
+    """Bir cümle penceresini (kare sayısı) çekimlere ve klip/kare parçalarına böler."""
+    parcalar = []
+    sigan = max(1, int(kare_sayisi / fps // EN_KISA_PAY))
+    if sigan < len(araliklar):
+        print(f"  UYARI {etiket}: {kare_sayisi / fps:.1f} sn'lik cümleye {len(araliklar)} çekim "
+              f"sığmıyor, ilk {sigan} tanesi kullanıldı. Taslakta çekim sayısını azaltın.")
+        araliklar = araliklar[:sigan]
+    for i, (a, b, zorla) in enumerate(araliklar):
+        pay_bas = round(kare_sayisi * i / len(araliklar))
+        pay_son = round(kare_sayisi * (i + 1) / len(araliklar))
+        pay = pay_son - pay_bas
+        if pay <= 0:
+            continue
+        sure = pay / fps
+        orta = (ayar.min_sure + ayar.max_sure) / 2
+        adet = max(1, round(sure / orta))
+        while sure / adet > EN_UZUN_PARCA:
+            adet += 1
+        sinirlar = [round(pay * j / adet) for j in range(adet + 1)]
+        uzunluklar = [y - x for x, y in zip(sinirlar, sinirlar[1:])]
+
+        turler = []
+        for _ in uzunluklar:
+            if durum["sonraki_kare"] == 0:
+                turler.append("kare")
+                durum["sonraki_kare"] = durum["rnd"].randint(ayar.min_klip, ayar.max_klip)
+            else:
+                turler.append("klip")
+                durum["sonraki_kare"] -= 1
+        if zorla:  # taslakta ! ile işaretli: hep klip
+            turler = ["klip"] * len(uzunluklar)
+        # Çekim kliplere yetmiyorsa sondan başlayarak durağan kareye çevir.
+        while sum(n for n, t in zip(uzunluklar, turler) if t == "klip") / fps > (b - a) \
+                and "klip" in turler:
+            turler[len(turler) - 1 - turler[::-1].index("klip")] = "kare"
+
+        klip_toplam = sum(n for n, t in zip(uzunluklar, turler) if t == "klip") / fps
+        bosluk = ((b - a) - klip_toplam) / max(1, len(uzunluklar))
+        konum = a + bosluk / 2
+        for n, t in zip(uzunluklar, turler):
+            dilim = n / fps
+            if t == "klip":
+                parcalar.append({"tur": "klip", "kare": n, "kaynak": konum, "cekim": (a, b)})
+                konum += dilim + bosluk
+            else:
+                ust = min(b, konum + max(dilim, 1.0))
+                parcalar.append({"tur": "kare", "kare": n, "cekim": (konum, ust) if ust - konum >= 0.5
+                                 else (a, b)})
+                konum += bosluk
+    return parcalar
+
+
+def klip_uret(film, p, hedef, kirpma, fps_metin):
+    calistir(["ffmpeg", "-y", "-v", "error", "-ss", f"{p['kaynak']:.3f}", "-i", str(film),
+              "-vf", f"{goruntu_filtresi(kirpma)},fps={fps_metin}", "-frames:v", str(p["kare"]),
+              *KODLAMA, str(hedef)])
+
+
+def kare_uret(film, p, hedef, kirpma, fps_metin, yakinlas, gecici):
     t = en_net_kare(film, p["cekim"], gecici, hedef.stem)
     p["kaynak"] = t
     png = hedef.with_suffix(".png")
     calistir(["ffmpeg", "-y", "-v", "error", "-ss", f"{t:.3f}", "-i", str(film),
               "-frames:v", "1", "-vf", goruntu_filtresi(kirpma), str(png)])
-    pay, payda = (int(x) for x in fps.split("/")) if "/" in fps else (int(float(fps)), 1)
-    kare_sayisi = max(1, round(p["sure"] * pay / payda))
-    hiz = ZOOM / kare_sayisi
+    hiz = ZOOM / p["kare"]
     zoom = f"1+{hiz}*on" if yakinlas else f"{1 + ZOOM}-{hiz}*on"
     calistir([
-        "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(png),
-        "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
-        "-filter_complex",
+        "ffmpeg", "-y", "-v", "error", "-loop", "1", "-i", str(png), "-filter_complex",
         # 2 kat büyütüp zoom yapmak, zoompan'ın tam sayı yuvarlamasından gelen titremeyi azaltır.
         f"[0:v]scale={GENISLIK * 2}:{YUKSEKLIK * 2},"
         f"zoompan=z='{zoom}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
-        f"d={kare_sayisi}:s={GENISLIK}x{YUKSEKLIK}:fps={fps},setsar=1[v]",
-        "-map", "[v]", "-map", "1:a", "-frames:v", str(kare_sayisi), "-t", f"{p['sure']:.3f}",
-        "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p",
-        "-c:a", "aac", "-ar", "48000", "-ac", "2", str(hedef),
-    ])
+        f"d={p['kare']}:s={GENISLIK}x{YUKSEKLIK}:fps={fps_metin},setsar=1[v]",
+        "-map", "[v]", "-frames:v", str(p["kare"]), *KODLAMA, str(hedef)])
     png.unlink()
 
 
+def onbellek_anahtari(film, p, kirpma, fps_metin, yakinlas):
+    """Parçayı belirleyen her şeyden bir anahtar; aynı anahtar = aynı video parçası."""
+    if p["tur"] == "klip":
+        icerik = ("klip", round(p["kaynak"], 3), p["kare"])
+    else:
+        icerik = ("kare", round(p["cekim"][0], 3), round(p["cekim"][1], 3), p["kare"], yakinlas)
+    metin = json.dumps([Path(film).name, kirpma, fps_metin, ZOOM, KODLAMA, *icerik])
+    return hashlib.sha1(metin.encode("utf-8")).hexdigest()[:20]
+
+
+def kare_say(dosya):
+    return int(calistir(["ffprobe", "-v", "error", "-select_streams", "v:0", "-count_packets",
+                         "-show_entries", "stream=nb_read_packets", "-of", "csv=p=0",
+                         str(dosya)]).strip())
+
+
 def main():
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import taslak
+
     ap = argparse.ArgumentParser()
     ap.add_argument("--film", required=True)
-    ap.add_argument("--segmentler", required=True)
-    ap.add_argument("--ses", help="S00.mp3, S01.mp3 ... içeren klasör")
+    ap.add_argument("--taslak", required=True, help="cümle başına çekim taslağı (.md)")
+    ap.add_argument("--ses", required=True, help="seslendir.py çıktısı: S00.wav + S00.json ...")
+    ap.add_argument("--katalog", help="varsayılan: taslağın yanındaki katalog/katalog.json")
     ap.add_argument("--cikti", required=True)
-    ap.add_argument("--min-sure", type=float, default=2.5, help="parça süresi alt sınırı (sn)")
-    ap.add_argument("--max-sure", type=float, default=4.5, help="parça süresi üst sınırı (sn, en fazla 5)")
+    ap.add_argument("--ara", type=float, default=0.45, help="segmentler arası sessizlik (sn)")
+    ap.add_argument("--min-sure", type=float, default=4.0, help="parça süresi alt sınırı (sn)")
+    ap.add_argument("--max-sure", type=float, default=6.0,
+                    help=f"parça süresi üst sınırı (sn, en fazla {EN_UZUN_PARCA:g})")
     ap.add_argument("--min-klip", type=int, default=2, help="iki kare arasındaki en az klip")
     ap.add_argument("--max-klip", type=int, default=4, help="iki kare arasındaki en çok klip")
-    ap.add_argument("--film-ses", type=float, default=0.12, help="kliplerde filmin sesi (0 = kapalı)")
-    ap.add_argument("--kayma", type=float, default=0.0, help="altyazı-film kayması (sn)")
     ap.add_argument("--kirpma", default="otomatik", help="otomatik | yok | w:h:x:y")
     ap.add_argument("--sadece", help="yalnızca bu segmentler, örn. S00,S01")
-    ap.add_argument("--tohum", type=int, default=1, help="farklı seçimler için değiştirin")
+    ap.add_argument("--tohum", type=int, default=1, help="farklı klip/kare dizilimi için değiştirin")
+    ap.add_argument("--kontrol", action="store_true",
+                    help="yalnızca taslağı ve tekrarları denetle, video üretme")
     ayar = ap.parse_args()
-    ayar.max_sure = min(ayar.max_sure, 5.0)
+    ayar.max_sure = min(ayar.max_sure, EN_UZUN_PARCA)
     ayar.min_sure = min(ayar.min_sure, ayar.max_sure)
 
     ffmpeg_kontrol()
     film = Path(ayar.film)
     if not film.exists():
         sys.exit(f"Film bulunamadı: {film}")
-    segmentler = json.loads(Path(ayar.segmentler).read_text(encoding="utf-8"))
+    segmentler = taslak.oku(ayar.taslak)
+    katalog_yolu = Path(ayar.katalog) if ayar.katalog else Path(ayar.taslak).with_name("katalog") / "katalog.json"
+    katalog = {c["id"]: c for c in json.loads(katalog_yolu.read_text(encoding="utf-8"))}
+    for uyari in tekrar_kontrol(segmentler, katalog):
+        print(uyari)
+    if ayar.kontrol:
+        return
     if ayar.sadece:
         secili = set(ayar.sadece.split(","))
         segmentler = [s for s in segmentler if s["id"] in secili]
-    ses_klasoru = Path(ayar.ses) if ayar.ses else None
-    rnd = random.Random(ayar.tohum)
+    ses = Path(ayar.ses)
+    zamanlar = {}
+    for s in segmentler:
+        bilgi_yolu = ses / f"{s['id']}.json"
+        if not bilgi_yolu.exists() or not (ses / f"{s['id']}.wav").exists():
+            sys.exit(f"{s['id']} sesi yok; önce seslendir.py çalıştırın (süre tahmin edilmez).")
+        bilgi = json.loads(bilgi_yolu.read_text(encoding="utf-8"))
+        if bilgi["metin"] != taslak.metin(s):
+            sys.exit(f"{s['id']}: taslak metni değişmiş, ses eski. seslendir.py'yi yeniden çalıştırın.")
+        zamanlar[s["id"]] = bilgi["cumleler"]
+
     cikti = Path(ayar.cikti)
     cikti.parent.mkdir(parents=True, exist_ok=True)
-
     bilgi = film_bilgisi(film)
+    fps = Fraction(bilgi["fps"])
     if ayar.kirpma == "otomatik":
         kirpma = siyah_bant_bul(film, bilgi["sure"])
     else:
@@ -290,43 +366,51 @@ def main():
     print(f"Film: {bilgi['genislik']}x{bilgi['yukseklik']}, {bilgi['fps']} fps, "
           f"{bilgi['sure'] / 60:.1f} dk, kırpma: {kirpma or 'yok'}")
 
-    onbellek_yolu = Path(ayar.segmentler).with_name("analiz_onbellek.json")
-    onbellek = json.loads(onbellek_yolu.read_text()) if onbellek_yolu.exists() else {}
-
     gecici = Path(tempfile.mkdtemp(prefix="kurgu_", dir=cikti.parent))
+    # Parça önbelleği: değişmeyen klip/kareler sonraki kurgularda yeniden kodlanmaz.
+    onbellek = Path(ayar.taslak).with_name("kurgu_onbellek")
+    onbellek.mkdir(exist_ok=True)
+    yeniden_kullanilan = 0
     try:
-        parca_dosyalari, ses_listesi, kurgu_plani, yakinlas = [], [], [], True
-        for s in segmentler:
-            ses = ses_klasoru / f"{s['id']}.mp3" if ses_klasoru else None
-            if ses and ses.exists():
-                toplam = sure(ses)
-                ses_listesi.append(ses)
-            else:
-                toplam = len(s["metin"].split()) / KELIME_SANIYE
+        ana_ses = gecici / "ana_ses.wav"
+        seg_baslari, ses_suresi = ana_ses_yap(segmentler, ses, ayar.ara, ana_ses)
+        toplam_kare = kare_no(ses_suresi, fps)
 
-            cekim_listesi = []
-            for a in s["sahneler"]:
-                bas = max(0.0, a["bas"] + ayar.kayma)
-                son = min(bilgi["sure"], a["son"] + ayar.kayma)
-                cekim_listesi += cekimler(bas, son, aralik_analiz(film, bas, son, onbellek))
-            onbellek_yolu.write_text(json.dumps(onbellek))
-            if not cekim_listesi:
-                sys.exit(f"{s['id']}: aralıkta kullanılabilir görüntü yok (hepsi siyah ya da çok kısa).")
-
-            parcalar = kaynak_ata(plan_yap(toplam, ayar, rnd), cekim_listesi, s["id"])
-            for i, p in enumerate(parcalar):
-                hedef = gecici / f"{s['id']}_{i:03d}.mp4"
-                if p["tur"] == "klip":
-                    klip_uret(film, p, hedef, kirpma, bilgi["fps"], ayar.film_ses)
-                else:
-                    kare_uret(film, p, hedef, kirpma, bilgi["fps"], yakinlas, gecici)
-                    p["zoom"] = "in" if yakinlas else "out"
-                    yakinlas = not yakinlas
-                parca_dosyalari.append(hedef)
-                kurgu_plani.append({"segment": s["id"], "tur": p["tur"], "zoom": p.get("zoom"),
-                                    "kaynak": round(p["kaynak"], 2), "sure": round(p["sure"], 2)})
-            klip = sum(p["tur"] == "klip" for p in parcalar)
-            print(f"{s['id']}: {toplam:.1f} sn, {klip} klip + {len(parcalar) - klip} kare")
+        durum = {"rnd": random.Random(ayar.tohum), "sonraki_kare": 0}
+        durum["sonraki_kare"] = durum["rnd"].randint(ayar.min_klip, ayar.max_klip)
+        parca_dosyalari, plan, yakinlas = [], [], True
+        for si, s in enumerate(segmentler):
+            seg_son = seg_baslari[si + 1] if si + 1 < len(segmentler) else ses_suresi
+            for ci, (cumle, z) in enumerate(zip(s["cumleler"], zamanlar[s["id"]])):
+                bas = seg_baslari[si] + z["bas"]
+                son = seg_son if ci == len(s["cumleler"]) - 1 else seg_baslari[si] + z["son"]
+                ilk, sonra = kare_no(bas, fps), kare_no(son, fps)
+                araliklar = [(*cekim_araligi(c, katalog), c["klip"]) for c in cumle["cekimler"]]
+                parcalar = pencere_parcala(sonra - ilk, araliklar, fps, ayar, durum,
+                                           f"{s['id']} cümle {ci + 1}")
+                kare_imleci = ilk
+                for p in parcalar:
+                    anahtar = onbellek_anahtari(film, p, kirpma, bilgi["fps"], yakinlas)
+                    hedef = onbellek / f"{anahtar}.mp4"
+                    kayit = onbellek / f"{anahtar}.json"
+                    if hedef.exists() and kayit.exists():
+                        p["kaynak"] = json.loads(kayit.read_text())["kaynak"]
+                        yeniden_kullanilan += 1
+                    elif p["tur"] == "klip":
+                        klip_uret(film, p, hedef, kirpma, bilgi["fps"])
+                    else:
+                        kare_uret(film, p, hedef, kirpma, bilgi["fps"], yakinlas, gecici)
+                    kayit.write_text(json.dumps({"kaynak": p["kaynak"]}))
+                    if p["tur"] == "kare":
+                        p["zoom"] = "in" if yakinlas else "out"
+                        yakinlas = not yakinlas
+                    parca_dosyalari.append(hedef)
+                    plan.append({"segment": s["id"], "cumle": ci + 1, "tur": p["tur"],
+                                 "zoom": p.get("zoom"), "kaynak": round(p["kaynak"], 2),
+                                 "video_bas": round(float(kare_imleci / fps), 3),
+                                 "kare_sayisi": p["kare"]})
+                    kare_imleci += p["kare"]
+            print(f"{s['id']}: {seg_son - seg_baslari[si]:.2f} sn, {len(s['cumleler'])} cümle")
 
         liste = gecici / "liste.txt"
         liste.write_text("".join(f"file '{p.resolve().as_posix()}'\n" for p in parca_dosyalari),
@@ -334,25 +418,40 @@ def main():
         gorsel = gecici / "gorsel.mp4"
         calistir(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(liste),
                   "-c", "copy", str(gorsel)])
+        gercek_kare = kare_say(gorsel)
+        if gercek_kare != toplam_kare:
+            sys.exit(f"SENKRON HATASI: görüntü {gercek_kare} kare, ses {toplam_kare} kare tutuyor.")
 
-        if ses_listesi and len(ses_listesi) == len(segmentler):
-            sliste = gecici / "ses.txt"
-            sliste.write_text("".join(f"file '{p.resolve().as_posix()}'\n" for p in ses_listesi),
-                              encoding="utf-8")
-            calistir([
-                "ffmpeg", "-y", "-v", "error", "-i", str(gorsel),
-                "-f", "concat", "-safe", "0", "-i", str(sliste),
-                "-filter_complex", "[0:a][1:a]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14[a]",
-                "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", str(cikti),
-            ])
-        else:
-            if ses_listesi:
-                print("UYARI: bazı segmentlerin sesi eksik, video anlatımsız üretildi.")
-            shutil.copy(gorsel, cikti)
+        # Ses normalize edilir, sonra görüntünün tam süresine örnek düzeyinde kesilir/tamamlanır.
+        ornek = round(Fraction(toplam_kare) / fps * 48000)
+        normal = gecici / "normal.wav"
+        calistir(["ffmpeg", "-y", "-v", "error", "-i", str(ana_ses), "-af", "loudnorm=I=-14:TP=-1.5",
+                  "-ar", "48000", "-c:a", "pcm_s16le", str(normal)])
+        esit = gecici / "esit.wav"
+        with wave.open(str(normal), "rb") as w, wave.open(str(esit), "wb") as e:
+            e.setparams(w.getparams())
+            kare_boyu = w.getsampwidth() * w.getnchannels()
+            veri = w.readframes(w.getnframes())[:ornek * kare_boyu]
+            e.writeframes(veri + b"\x00" * (ornek * kare_boyu - len(veri)))
+        calistir(["ffmpeg", "-y", "-v", "error", "-i", str(gorsel), "-i", str(esit),
+                  "-map", "0:v", "-map", "1:a",
+                  "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", str(cikti)])
+        # Kontrol: kodlanmış ses çözülüp örnekleri sayılır (AAC'nin kap süresine eklediği dolgu sayılmaz).
+        cozulen = gecici / "kontrol.wav"
+        calistir(["ffmpeg", "-y", "-v", "error", "-i", str(cikti), "-map", "0:a", "-c:a", "pcm_s16le",
+                  str(cozulen)])
+        with wave.open(str(cozulen), "rb") as w:
+            ses_ornek = w.getnframes()
+        sure = {"video": float(gercek_kare / fps), "audio": ses_ornek / 48000}
+        fark = abs(sure["video"] - sure["audio"])
+        if fark > 1 / fps:
+            sys.exit(f"SENKRON HATASI: görüntü {sure['video']:.3f} sn, ses {sure['audio']:.3f} sn.")
 
         cikti.with_suffix(".plan.json").write_text(
-            json.dumps(kurgu_plani, ensure_ascii=False, indent=1), encoding="utf-8")
-        print(f"-> {cikti} ({sure(cikti):.1f} sn), plan: {cikti.with_suffix('.plan.json')}")
+            json.dumps(plan, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"-> {cikti} ({sure['video']:.2f} sn, {gercek_kare} kare, ses farkı "
+              f"{fark * 1000:.0f} ms), plan: {cikti.with_suffix('.plan.json')}, "
+              f"önbellekten {yeniden_kullanilan}/{len(parca_dosyalari)} parça")
     finally:
         shutil.rmtree(gecici, ignore_errors=True)
 

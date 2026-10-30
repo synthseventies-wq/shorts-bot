@@ -1,0 +1,2074 @@
+[
+ {
+  "id": "C00002",
+  "bas": 2.44,
+  "son": 22.51,
+  "sure": 20.1,
+  "aciklama": "YASAK: 20th Century Fox logosu"
+ },
+ {
+  "id": "C00042",
+  "bas": 42.77,
+  "son": 90.37,
+  "sure": 47.6,
+  "aciklama": "Andrew aynadaki kamerayla kendini çekiyor; +0-22 babası kapının arkasından bağırıyor (görünmüyor), +27-35 'kamera aldım, her şeyi çekeceğim', +35 sonrası odadan çıkıyor"
+ },
+ {
+  "id": "C00090",
+  "bas": 90.57,
+  "son": 97.62,
+  "sure": 7.1,
+  "aciklama": "Annenin odası: boş yastık, serum askısı, TV sesi"
+ },
+ {
+  "id": "C00097",
+  "bas": 97.82,
+  "son": 115.93,
+  "sure": 18.1,
+  "aciklama": "Anne Karen yatakta, burnunda oksijen, kameraya gülümsüyor"
+ },
+ {
+  "id": "C00116",
+  "bas": 116.13,
+  "son": 118.94,
+  "sure": 2.8,
+  "aciklama": "Anne yatakta, yakın plan, mendiller"
+ },
+ {
+  "id": "C00119",
+  "bas": 119.14,
+  "son": 127.19,
+  "sure": 8.1,
+  "aciklama": "Sokak, Matt'in eski mavi arabası geliyor (S03)"
+ },
+ {
+  "id": "C00127",
+  "bas": 127.39,
+  "son": 145.3,
+  "sure": 17.9,
+  "aciklama": "Matt arabada, yağmurlu cam, konuşuyor (S03)"
+ },
+ {
+  "id": "C00145",
+  "bas": 145.5,
+  "son": 158.22,
+  "sure": 12.7,
+  "aciklama": "Matt yakın plan, yağmurlu cam (S03)"
+ },
+ {
+  "id": "C00158",
+  "bas": 158.47,
+  "son": 167.36,
+  "sure": 8.9,
+  "aciklama": "Matt arabada konuşuyor, yakın (S03)"
+ },
+ {
+  "id": "C00167",
+  "bas": 167.56,
+  "son": 178.83,
+  "sure": 11.3,
+  "aciklama": "Arabadan yol görüntüsü, ağaçlık (S03)"
+ },
+ {
+  "id": "C00179",
+  "bas": 179.03,
+  "son": 195.35,
+  "sure": 16.3,
+  "aciklama": "Matt araba sürüyor, konuşuyor (S03)"
+ },
+ {
+  "id": "C00195",
+  "bas": 195.59,
+  "son": 202.98,
+  "sure": 7.4,
+  "aciklama": "Okul otoparkı, öğrenciler, arabadan (S03)"
+ },
+ {
+  "id": "C00203",
+  "bas": 203.18,
+  "son": 205.48,
+  "sure": 2.3,
+  "aciklama": "Matt park ediyor (S03)"
+ },
+ {
+  "id": "C00205",
+  "bas": 205.68,
+  "son": 215.2,
+  "sure": 9.5,
+  "aciklama": "Matt arabada eğilmiş (S03)"
+ },
+ {
+  "id": "C00215",
+  "bas": 215.4,
+  "son": 230.3,
+  "sure": 14.9,
+  "aciklama": "Okul koridoru, seçim afişleri, gülen öğrenci (S03)"
+ },
+ {
+  "id": "C00230",
+  "bas": 230.5,
+  "son": 240.18,
+  "sure": 9.7,
+  "aciklama": "Okul çimi, ponponlu kızlar (S03)"
+ },
+ {
+  "id": "C00240",
+  "bas": 240.38,
+  "son": 256.45,
+  "sure": 16.1,
+  "aciklama": "Andrew tribünde tek başına, sahada ponponlu kızlar ve futbolcular"
+ },
+ {
+  "id": "C00256",
+  "bas": 256.65,
+  "son": 269.71,
+  "sure": 13.1,
+  "aciklama": "Ponponlu kız kameraya bakıp laf atıyor"
+ },
+ {
+  "id": "C00269",
+  "bas": 269.95,
+  "son": 274.22,
+  "sure": 4.3,
+  "aciklama": "Koridor, dolaplar, seçim afişleri, sırt çantalı öğrenci"
+ },
+ {
+  "id": "C00274",
+  "bas": 274.42,
+  "son": 284.02,
+  "sure": 9.6,
+  "aciklama": "Koridorda zorba Andrew'un kamerasını kapıyor (kamera sarsılıyor)"
+ },
+ {
+  "id": "C00284",
+  "bas": 284.22,
+  "son": 293.23,
+  "sure": 9.0,
+  "aciklama": "Koridorda bir grup öğrenci (Sean ve arkadaşları), ponponlu kız"
+ },
+ {
+  "id": "C00293",
+  "bas": 293.48,
+  "son": 303.75,
+  "sure": 10.3,
+  "aciklama": "Okul koridoru, kalabalık"
+ },
+ {
+  "id": "C00303",
+  "bas": 303.95,
+  "son": 311.79,
+  "sure": 7.8,
+  "aciklama": "Arabanın yan aynasında kameralı Andrew"
+ },
+ {
+  "id": "C00311",
+  "bas": 311.99,
+  "son": 315.05,
+  "sure": 3.1,
+  "aciklama": "Matt arabada konuşuyor, yakın"
+ },
+ {
+  "id": "C00315",
+  "bas": 315.25,
+  "son": 325.1,
+  "sure": 9.9,
+  "aciklama": "Matt araba sürüyor, konuşuyor"
+ },
+ {
+  "id": "C00325",
+  "bas": 325.3,
+  "son": 350.04,
+  "sure": 24.7,
+  "aciklama": "Matt arabada uzun konuşma, yakın plan (parti daveti, 'kamerayı getirme')"
+ },
+ {
+  "id": "C00350",
+  "bas": 350.24,
+  "son": 367.56,
+  "sure": 17.3,
+  "aciklama": "Andrew'un sokağı, mahalledeki serseriler yürüyor"
+ },
+ {
+  "id": "C00367",
+  "bas": 367.76,
+  "son": 379.9,
+  "sure": 12.1,
+  "aciklama": "Andrew odasında kamerayı elinde tutuyor"
+ },
+ {
+  "id": "C00380",
+  "bas": 380.1,
+  "son": 399.9,
+  "sure": 19.8,
+  "aciklama": "Andrew'un odası: +0-7 Andrew masada kameraya bakıyor, +8-19 babası (ekose gömlek) odaya girip bağırıyor"
+ },
+ {
+  "id": "C00400",
+  "bas": 400.1,
+  "son": 427.91,
+  "sure": 27.8,
+  "aciklama": "+0-6 Andrew'un boş odası, +7-27 Andrew masada, başı önde"
+ },
+ {
+  "id": "C00428",
+  "bas": 428.74,
+  "son": 440.63,
+  "sure": 11.9,
+  "aciklama": "Matt gece arabada (partiye geliş)"
+ },
+ {
+  "id": "C00440",
+  "bas": 440.83,
+  "son": 452.31,
+  "sure": 11.5,
+  "aciklama": "Parti: renkli ışıklar, kalabalık, Andrew'un sırtı"
+ },
+ {
+  "id": "C00492",
+  "bas": 492.01,
+  "son": 495.94,
+  "sure": 3.9,
+  "aciklama": "Partide Andrew elinde kamerayla"
+ },
+ {
+  "id": "C00496",
+  "bas": 496.5,
+  "son": 525.5,
+  "sure": 29.0,
+  "aciklama": "ELLE: Parti, Casey kamerasıyla Matt'le konuşuyor; +0-28 Casey ve Matt arasında kısa kesmeler"
+ },
+ {
+  "id": "C00545",
+  "bas": 545.02,
+  "son": 548.32,
+  "sure": 3.3,
+  "aciklama": "Partide dans eden kız (zorbanın sevgilisi)"
+ },
+ {
+  "id": "C00550",
+  "bas": 550.4,
+  "son": 551.95,
+  "sure": 1.6,
+  "aciklama": "Şapkalı genç kızgın bakıyor ('kız arkadaşımı mı çekiyorsun')"
+ },
+ {
+  "id": "C00552",
+  "bas": 552.15,
+  "son": 554.08,
+  "sure": 1.9,
+  "aciklama": "Şapkalı genç, yakın"
+ },
+ {
+  "id": "C00562",
+  "bas": 562.54,
+  "son": 564.76,
+  "sure": 2.2,
+  "aciklama": "Partide itiş kakış"
+ },
+ {
+  "id": "C00567",
+  "bas": 567.96,
+  "son": 580.31,
+  "sure": 12.4,
+  "aciklama": "Dışarıda çimenlere düşmüş kamera, park etmiş arabalar"
+ },
+ {
+  "id": "C00582",
+  "bas": 582.06,
+  "son": 583.65,
+  "sure": 1.6,
+  "aciklama": "Karanlık, bulanık yakın"
+ },
+ {
+  "id": "C00584",
+  "bas": 584.06,
+  "son": 632.45,
+  "sure": 48.4,
+  "aciklama": "+0-12 çimen ve arabalar, +15-34 Steve çömelmiş Andrew'la gülerek konuşuyor, +38-48 Steve gece arabaların önünde"
+ },
+ {
+  "id": "C00633",
+  "bas": 633.9,
+  "son": 635.7,
+  "sure": 1.8,
+  "aciklama": "Steve karanlık ormanda"
+ },
+ {
+  "id": "C00645",
+  "bas": 646.0,
+  "son": 653.89,
+  "sure": 7.9,
+  "aciklama": "Steve ağaç dalını itiyor, orman"
+ },
+ {
+  "id": "C00654",
+  "bas": 654.3,
+  "son": 662.77,
+  "sure": 8.5,
+  "aciklama": "Steve gece ormanda, yüzü aydınlık"
+ },
+ {
+  "id": "C00664",
+  "bas": 664.51,
+  "son": 675.53,
+  "sure": 11.0,
+  "aciklama": "Gece ormanda, Steve fenerle yürüyor"
+ },
+ {
+  "id": "C00679",
+  "bas": 679.82,
+  "son": 705.4,
+  "sure": 25.6,
+  "aciklama": "Yerdeki delik bulunuyor; Andrew ve Steve deliğe eğiliyor"
+ },
+ {
+  "id": "C00705",
+  "bas": 705.6,
+  "son": 737.85,
+  "sure": 32.2,
+  "aciklama": "Deliğe iniş: Matt aşağı tırmanıyor, deliğin içi"
+ },
+ {
+  "id": "C00747",
+  "bas": 747.76,
+  "son": 750.82,
+  "sure": 3.1,
+  "aciklama": "Deliğin dibinde ayak, ışıklı zemin"
+ },
+ {
+  "id": "C00753",
+  "bas": 753.48,
+  "son": 757.03,
+  "sure": 3.6,
+  "aciklama": "Steve panikle bağırıyor"
+ },
+ {
+  "id": "C00769",
+  "bas": 769.33,
+  "son": 780.68,
+  "sure": 11.4,
+  "aciklama": "Matt dar tünelde"
+ },
+ {
+  "id": "C00785",
+  "bas": 785.8,
+  "son": 787.44,
+  "sure": 1.6,
+  "aciklama": "Tünelde karanlık, sürünme"
+ },
+ {
+  "id": "C00792",
+  "bas": 792.14,
+  "son": 794.4,
+  "sure": 2.3,
+  "aciklama": "Mavi ışık beliriyor, sırttan çekim"
+ },
+ {
+  "id": "C00800",
+  "bas": 800.27,
+  "son": 802.54,
+  "sure": 2.3,
+  "aciklama": "Mavi ışıklı mağara, karanlık"
+ },
+ {
+  "id": "C00802",
+  "bas": 802.99,
+  "son": 810.46,
+  "sure": 7.5,
+  "aciklama": "Mavi parlayan kristal yüzey"
+ },
+ {
+  "id": "C00810",
+  "bas": 810.66,
+  "son": 815.46,
+  "sure": 4.8,
+  "aciklama": "Matt mavi ışıkta, şaşkın"
+ },
+ {
+  "id": "C00816",
+  "bas": 816.87,
+  "son": 820.14,
+  "sure": 3.3,
+  "aciklama": "Kristal, parlak mavi ışık patlaması"
+ },
+ {
+  "id": "C00821",
+  "bas": 821.59,
+  "son": 825.47,
+  "sure": 3.9,
+  "aciklama": "Üçü kristalin önünde siluet, damarlı mavi ışık"
+ },
+ {
+  "id": "C00825",
+  "bas": 825.76,
+  "son": 838.49,
+  "sure": 12.7,
+  "aciklama": "Kristal yakın, Steve yüzü"
+ },
+ {
+  "id": "C00844",
+  "bas": 844.4,
+  "son": 849.83,
+  "sure": 5.4,
+  "aciklama": "Steve burnu kanıyor, kırmızı-mor ışık, bozuk görüntü"
+ },
+ {
+  "id": "C00870",
+  "bas": 870.34,
+  "son": 907.18,
+  "sure": 36.8,
+  "aciklama": "Gündüz bahçe: +0-12 çimen, Steve sırtı, +15-25 Matt ve Steve, +26-36 şakalaşma"
+ },
+ {
+  "id": "C00907",
+  "bas": 907.38,
+  "son": 916.44,
+  "sure": 9.1,
+  "aciklama": "Bahçede Matt elinde topla, uzakta Steve"
+ },
+ {
+  "id": "C00916",
+  "bas": 916.64,
+  "son": 940.9,
+  "sure": 24.3,
+  "aciklama": "Bahçede top oyunu: +0-8 Steve ve Matt, +10-13 Matt yere düşüyor, +14-24 Steve gülüyor, Andrew uzakta"
+ },
+ {
+  "id": "C00941",
+  "bas": 941.1,
+  "son": 960.03,
+  "sure": 18.9,
+  "aciklama": "Bahçede gülüşme; +3-10 havada top, +14-19 bahçede top oyunu (telekinezi)"
+ },
+ {
+  "id": "C00960",
+  "bas": 960.23,
+  "son": 1012.9,
+  "sure": 52.7,
+  "aciklama": "Odada Lego'lar; +38-50 Lego kulesi havada yükseliyor (telekinezi)"
+ },
+ {
+  "id": "C01013",
+  "bas": 1013.78,
+  "son": 1034.93,
+  "sure": 21.2,
+  "aciklama": "Odada Steve ve Andrew gülerek konuşuyor, Steve elinde bir şey tutuyor"
+ },
+ {
+  "id": "C01035",
+  "bas": 1035.13,
+  "son": 1041.86,
+  "sure": 6.7,
+  "aciklama": "Arabada direksiyon, el"
+ },
+ {
+  "id": "C01042",
+  "bas": 1042.06,
+  "son": 1046.32,
+  "sure": 4.3,
+  "aciklama": "Ön camdan orman yolu, gündüz"
+ },
+ {
+  "id": "C01046",
+  "bas": 1046.52,
+  "son": 1051.58,
+  "sure": 5.1,
+  "aciklama": "Ahşap ambar ve çimenlik, gündüz"
+ },
+ {
+  "id": "C01051",
+  "bas": 1051.78,
+  "son": 1099.9,
+  "sure": 48.1,
+  "aciklama": "Gündüz ormanda: +0-9 Andrew ve Steve yürüyor, +10-22 çökmüş delik, taşlar, +24-34 Steve etrafa bakıyor, +40 sonrası gece Seattle (başka sahne, kullanma)"
+ },
+ {
+  "id": "C01095",
+  "bas": 1095.1,
+  "son": 1191.9,
+  "sure": 96.8,
+  "aciklama": "Gece Steve arabayla Andrew'u eve bırakıyor, ikisi konuşuyor (karanlık): +0-8 Seattle sokağı, +10-95 araba içi; +82 'annem babamı aldatıyor'"
+ },
+ {
+  "id": "C01192",
+  "bas": 1192.1,
+  "son": 1232.76,
+  "sure": 40.7,
+  "aciklama": "+0-15 Andrew aynada kamerayla, +18-30 odasında ayakta telefonla (eczane), +32-40 yatakta"
+ },
+ {
+  "id": "C01232",
+  "bas": 1232.96,
+  "son": 1239.35,
+  "sure": 6.4,
+  "aciklama": "Dışarıda, bulanık mont, güneş (anneyle gezinti)"
+ },
+ {
+  "id": "C01239",
+  "bas": 1239.55,
+  "son": 1241.68,
+  "sure": 2.1,
+  "aciklama": "Andrew annesine sarılmış, ikisi gülüyor, dışarıda"
+ },
+ {
+  "id": "C01241",
+  "bas": 1241.88,
+  "son": 1249.73,
+  "sure": 7.8,
+  "aciklama": "Andrew iskelede gülümsüyor, tekneler"
+ },
+ {
+  "id": "C01249",
+  "bas": 1249.93,
+  "son": 1264.79,
+  "sure": 14.9,
+  "aciklama": "Andrew iskelede, yakın, gülümsüyor"
+ },
+ {
+  "id": "C01264",
+  "bas": 1264.99,
+  "son": 1274.9,
+  "sure": 9.9,
+  "aciklama": "Çimen ve su, eğik kadraj"
+ },
+ {
+  "id": "C01275",
+  "bas": 1275.1,
+  "son": 1295.11,
+  "sure": 20.0,
+  "aciklama": "Andrew göl kenarında ayakta, kameraya bakıyor"
+ },
+ {
+  "id": "C01295",
+  "bas": 1295.31,
+  "son": 1328.56,
+  "sure": 33.3,
+  "aciklama": "Andrew göl kenarında, eliyle suya bir şey yapıyor (güç)"
+ },
+ {
+  "id": "C01328",
+  "bas": 1328.76,
+  "son": 1349.67,
+  "sure": 20.9,
+  "aciklama": "Yağmurda şemsiyeli Steve ve Matt, okul"
+ },
+ {
+  "id": "C01349",
+  "bas": 1349.87,
+  "son": 1358.92,
+  "sure": 9.1,
+  "aciklama": "Şemsiyeli kızların etekleri uçuyor (şaka), yaprak üfleyici"
+ },
+ {
+  "id": "C01359",
+  "bas": 1359.12,
+  "son": 1401.17,
+  "sure": 42.1,
+  "aciklama": "Tribünde üçü oturmuş konuşuyor: +0-12 Andrew 'yatağı kaldırdım', +14-41 Matt konuşuyor"
+ },
+ {
+  "id": "C01401",
+  "bas": 1401.37,
+  "son": 1405.43,
+  "sure": 4.1,
+  "aciklama": "Oyuncakçı otoparkı, arabanın arkası"
+ },
+ {
+  "id": "C01405",
+  "bas": 1405.63,
+  "son": 1428.08,
+  "sure": 22.4,
+  "aciklama": "Oyuncakçı içi, raflar, alışveriş arabası"
+ },
+ {
+  "id": "C01428",
+  "bas": 1428.28,
+  "son": 1439.13,
+  "sure": 10.9,
+  "aciklama": "Oyuncakçı: uçan oyuncak ayılar, küçük kız"
+ },
+ {
+  "id": "C01439",
+  "bas": 1439.33,
+  "son": 1452.9,
+  "sure": 13.6,
+  "aciklama": "Oyuncakçı rafı, Andrew yeşil ürünlerle"
+ },
+ {
+  "id": "C01562",
+  "bas": 1562.1,
+  "son": 1563.8,
+  "sure": 1.7,
+  "aciklama": "Lokantada Steve ve Matt"
+ },
+ {
+  "id": "C01563",
+  "bas": 1564.0,
+  "son": 1592.53,
+  "sure": 28.5,
+  "aciklama": "Lokanta: +0-5 Steve, +6-20 havada süzülen kameradan Andrew ve masa (yukarıdan), +24-28 üçü masada"
+ },
+ {
+  "id": "C01592",
+  "bas": 1592.73,
+  "son": 1611.72,
+  "sure": 19.0,
+  "aciklama": "Lokanta, Steve ve Matt gülüyor"
+ },
+ {
+  "id": "C01611",
+  "bas": 1611.92,
+  "son": 1630.82,
+  "sure": 18.9,
+  "aciklama": "Otopark: +0-5 Steve ve Andrew, +6-14 kırmızı üstü açık araba taşınıyor, +16-19 ikisi"
+ },
+ {
+  "id": "C01631",
+  "bas": 1631.02,
+  "son": 1651.63,
+  "sure": 20.6,
+  "aciklama": "Otopark: Steve kırmızı yelekle arabayı oynatıyor, +18-20 sevinç"
+ },
+ {
+  "id": "C01651",
+  "bas": 1651.83,
+  "son": 1655.35,
+  "sure": 3.5,
+  "aciklama": "Otoparkta Steve bağırıyor, Andrew gülüyor"
+ },
+ {
+  "id": "C01655",
+  "bas": 1655.55,
+  "son": 1660.14,
+  "sure": 4.6,
+  "aciklama": "Andrew burnu kanamış mendille gülüyor, Steve yanında"
+ },
+ {
+  "id": "C01660",
+  "bas": 1660.34,
+  "son": 1696.97,
+  "sure": 36.6,
+  "aciklama": "Otopark: +0-8 Steve ve Andrew, +10-26 kadın arabasına dönüp yerinde bulamıyor, +28-36 ikisi gülüyor"
+ },
+ {
+  "id": "C01697",
+  "bas": 1697.17,
+  "son": 1703.35,
+  "sure": 6.2,
+  "aciklama": "Yağmurlu yolda arabada Matt ve Steve el sallıyor, arkadan selektör"
+ },
+ {
+  "id": "C01703",
+  "bas": 1703.55,
+  "son": 1716.2,
+  "sure": 12.6,
+  "aciklama": "Arabada Andrew elini kaldırıyor (kamyoneti itiyor), ön cam"
+ },
+ {
+  "id": "C01716",
+  "bas": 1716.4,
+  "son": 1739.68,
+  "sure": 23.3,
+  "aciklama": "+0-12 arkada farları yanan kamyonet, +14-23 yol, kamyonet yoldan çıkmış"
+ },
+ {
+  "id": "C01741",
+  "bas": 1741.3,
+  "son": 1791.9,
+  "sure": 50.6,
+  "aciklama": "Yağmurda gölde batmış kamyonet, Steve suya koşuyor ve sürücüyü çıkarıyor"
+ },
+ {
+  "id": "C01811",
+  "bas": 1811.1,
+  "son": 1830.15,
+  "sure": 19.0,
+  "aciklama": "+0-3 Steve yaralı sürücüyle, +4-11 Matt telefonda (ambulans) öfkeli, +13 sonrası karanlık ağaçlar"
+ },
+ {
+  "id": "C01830",
+  "bas": 1830.35,
+  "son": 1873.9,
+  "sure": 43.6,
+  "aciklama": "Gece göl kenarında üçü konuşuyor (kurallar 30:52-31:00 = +22-30), karanlık"
+ },
+ {
+  "id": "C01922",
+  "bas": 1922.35,
+  "son": 1926.57,
+  "sure": 4.2,
+  "aciklama": "Kereste alanı, cip, ön camdan"
+ },
+ {
+  "id": "C01926",
+  "bas": 1926.77,
+  "son": 1958.15,
+  "sure": 31.4,
+  "aciklama": "Kereste alanı; +17-30 Steve havaya fırlıyor, uçuyor"
+ },
+ {
+  "id": "C01958",
+  "bas": 1958.35,
+  "son": 1971.16,
+  "sure": 12.8,
+  "aciklama": "Steve gökyüzünde, uzak plan"
+ },
+ {
+  "id": "C01971",
+  "bas": 1971.36,
+  "son": 1980.09,
+  "sure": 8.7,
+  "aciklama": "Steve havada süzülüyor, kereste yığını"
+ },
+ {
+  "id": "C01980",
+  "bas": 1980.29,
+  "son": 2019.9,
+  "sure": 39.6,
+  "aciklama": "Andrew yığında; +20-39 ikisi birlikte havada uçuyor"
+ },
+ {
+  "id": "C02028",
+  "bas": 2028.1,
+  "son": 2044.53,
+  "sure": 16.4,
+  "aciklama": "Bulutların üstünde uçuş, gün batımı"
+ },
+ {
+  "id": "C02044",
+  "bas": 2044.73,
+  "son": 2047.07,
+  "sure": 2.3,
+  "aciklama": "Bulut içinde süzülen figür"
+ },
+ {
+  "id": "C02047",
+  "bas": 2047.27,
+  "son": 2058.25,
+  "sure": 11.0,
+  "aciklama": "İkisi bulutların üstünde uçuyor"
+ },
+ {
+  "id": "C02058",
+  "bas": 2058.45,
+  "son": 2064.63,
+  "sure": 6.2,
+  "aciklama": "Bulutlar arasında küçük figür"
+ },
+ {
+  "id": "C02065",
+  "bas": 2065.2,
+  "son": 2073.47,
+  "sure": 8.3,
+  "aciklama": "Kırmızı montlu Steve bulutların üzerinde süzülüyor"
+ },
+ {
+  "id": "C02073",
+  "bas": 2073.67,
+  "son": 2077.77,
+  "sure": 4.1,
+  "aciklama": "Bulutlarda takla atan figür"
+ },
+ {
+  "id": "C02077",
+  "bas": 2077.97,
+  "son": 2088.9,
+  "sure": 10.9,
+  "aciklama": "Bulutlar, uzakta figür"
+ },
+ {
+  "id": "C02089",
+  "bas": 2089.1,
+  "son": 2127.9,
+  "sure": 38.8,
+  "aciklama": "+0-14 Steve bulutların üstünde futbol topuyla, +17-24 bulut, +26-38 bulut içinde küçük uçak beliriyor"
+ },
+ {
+  "id": "C02129",
+  "bas": 2129.85,
+  "son": 2134.16,
+  "sure": 4.3,
+  "aciklama": "Yolcu uçağının penceresinden aşağı bakış"
+ },
+ {
+  "id": "C02134",
+  "bas": 2134.36,
+  "son": 2140.08,
+  "sure": 5.7,
+  "aciklama": "Uçak penceresinden göl ve arazi"
+ },
+ {
+  "id": "C02141",
+  "bas": 2141.61,
+  "son": 2189.84,
+  "sure": 48.2,
+  "aciklama": "+0-20 çimenlere düşmüş ikisi, gülüyor, +27-48 tepede uzaktan"
+ },
+ {
+  "id": "C02190",
+  "bas": 2190.04,
+  "son": 2211.9,
+  "sure": 21.9,
+  "aciklama": "+0-9 Steve yerde, Matt konuşuyor, +10-20 Matt ve Steve kameraya coşkuyla bağırıyor, +21 kupalar (başka sahne)"
+ },
+ {
+  "id": "C02266",
+  "bas": 2266.1,
+  "son": 2320.51,
+  "sure": 54.4,
+  "aciklama": "Gece üçü yerde uzanmış konuşuyor (çok karanlık), +15 'en güzel günüm'"
+ },
+ {
+  "id": "C02320",
+  "bas": 2320.71,
+  "son": 2340.49,
+  "sure": 19.8,
+  "aciklama": "Kütüphanede Andrew ve Steve ders çalışıyor; +8-19 Tibet konuşması"
+ },
+ {
+  "id": "C02340",
+  "bas": 2340.69,
+  "son": 2376.69,
+  "sure": 36.0,
+  "aciklama": "Kütüphanede Andrew yakın, konuşuyor"
+ },
+ {
+  "id": "C02376",
+  "bas": 2376.89,
+  "son": 2387.9,
+  "sure": 11.0,
+  "aciklama": "Orman yolunda sırt çantalı Steve ve Andrew"
+ },
+ {
+  "id": "C02405",
+  "bas": 2405.1,
+  "son": 2517.21,
+  "sure": 112.1,
+  "aciklama": "Matt Casey'nin kapısında (bağış, 'değiştim' konuşması); Casey ve arkadaşı kapıda, +109 Casey yalnız"
+ },
+ {
+  "id": "C02517",
+  "bas": 2517.41,
+  "son": 2552.12,
+  "sure": 34.7,
+  "aciklama": "Space Needle çatısında Steve ve Andrew oturuyor, şehir manzarası (+0-6 manzara)"
+ },
+ {
+  "id": "C02552",
+  "bas": 2552.32,
+  "son": 2558.96,
+  "sure": 6.6,
+  "aciklama": "Çatıda Andrew ve Steve konuşuyor, el hareketi, deniz"
+ },
+ {
+  "id": "C02559",
+  "bas": 2559.16,
+  "son": 2574.1,
+  "sure": 14.9,
+  "aciklama": "Steve çatıda yakın, gün batımı"
+ },
+ {
+  "id": "C02574",
+  "bas": 2574.3,
+  "son": 2592.66,
+  "sure": 18.4,
+  "aciklama": "Steve yakın, dinliyor ('senin hep arkadaşın oldu')"
+ },
+ {
+  "id": "C02592",
+  "bas": 2592.86,
+  "son": 2622.44,
+  "sure": 29.6,
+  "aciklama": "Çatı kenarında Steve ayakta, Andrew oturuyor, şehir yukarıdan"
+ },
+ {
+  "id": "C02622",
+  "bas": 2622.64,
+  "son": 2657.47,
+  "sure": 34.8,
+  "aciklama": "Çatıda Andrew ve Steve konuşuyor (+6 'yetenek gösterisine katıl')"
+ },
+ {
+  "id": "C02657",
+  "bas": 2657.67,
+  "son": 2659.9,
+  "sure": 2.2,
+  "aciklama": "Takım elbiseli adam kapıda el kaldırıyor"
+ },
+ {
+  "id": "C02689",
+  "bas": 2689.1,
+  "son": 2729.84,
+  "sure": 40.7,
+  "aciklama": "Baba Richard evde: +0-18 kanepede uzanmış içiyor, +20-40 koltukta oturmuş Andrew'la konuşuyor (şüphe, tehdit)"
+ },
+ {
+  "id": "C02730",
+  "bas": 2730.04,
+  "son": 2734.9,
+  "sure": 4.9,
+  "aciklama": "Bulanık renkli ışıklar"
+ },
+ {
+  "id": "C02755",
+  "bas": 2755.1,
+  "son": 2775.88,
+  "sure": 20.8,
+  "aciklama": "Yetenek gösterisi seyircileri, Matt kalabalıkta (karanlık)"
+ },
+ {
+  "id": "C02776",
+  "bas": 2776.29,
+  "son": 2792.44,
+  "sure": 16.1,
+  "aciklama": "Casey kamerasıyla gösteriyi çekiyor, gülümsüyor"
+ },
+ {
+  "id": "C02795",
+  "bas": 2795.18,
+  "son": 2906.14,
+  "sure": 111.0,
+  "aciklama": "Gösteri: +0-33 BAŞKA GÖSTERİCİ (mavi ışık, kullanma), +45-80 Steve ve Andrew sahnede, +85-108 Andrew sahnede gösteri yapıyor"
+ },
+ {
+  "id": "C02908",
+  "bas": 2908.34,
+  "son": 2972.33,
+  "sure": 64.0,
+  "aciklama": "+0-22 Andrew sahnede numaralar (ip üzerinde), +24-32 kollarını kaldırıyor alkış, +36-45 Steve arabada, +54-62 parti girişi"
+ },
+ {
+  "id": "C02972",
+  "bas": 2972.53,
+  "son": 2993.06,
+  "sure": 20.5,
+  "aciklama": "Parti: kalabalık Andrew'u karşılıyor, ışıklar"
+ },
+ {
+  "id": "C02993",
+  "bas": 2993.26,
+  "son": 2995.6,
+  "sure": 2.3,
+  "aciklama": "Parti kalabalığı"
+ },
+ {
+  "id": "C02997",
+  "bas": 2997.09,
+  "son": 3004.28,
+  "sure": 7.2,
+  "aciklama": "Partide kanepede genç kırmızı bardakla"
+ },
+ {
+  "id": "C03004",
+  "bas": 3004.48,
+  "son": 3006.95,
+  "sure": 2.5,
+  "aciklama": "Monica (kırmızı peruk) gülümsüyor"
+ },
+ {
+  "id": "C03007",
+  "bas": 3007.15,
+  "son": 3011.2,
+  "sure": 4.1,
+  "aciklama": "Monica gülümsüyor, kalabalık"
+ },
+ {
+  "id": "C03011",
+  "bas": 3011.4,
+  "son": 3013.04,
+  "sure": 1.6,
+  "aciklama": "Monica gülüyor"
+ },
+ {
+  "id": "C03013",
+  "bas": 3013.24,
+  "son": 3041.94,
+  "sure": 28.7,
+  "aciklama": "Andrew ve Monica kanepede yan yana (+10-28)"
+ },
+ {
+  "id": "C03042",
+  "bas": 3042.14,
+  "son": 3044.78,
+  "sure": 2.6,
+  "aciklama": "Matt yakın, bulanık"
+ },
+ {
+  "id": "C03044",
+  "bas": 3044.98,
+  "son": 3068.88,
+  "sure": 23.9,
+  "aciklama": "Parti: +0-7 Andrew ve Monica, +10-18 bira pong kalabalık, +18-23 Monica Andrew'u öpüyor"
+ },
+ {
+  "id": "C03069",
+  "bas": 3069.08,
+  "son": 3081.27,
+  "sure": 12.2,
+  "aciklama": "Steve partide gülüyor, bardak"
+ },
+ {
+  "id": "C03081",
+  "bas": 3081.47,
+  "son": 3110.84,
+  "sure": 29.4,
+  "aciklama": "Matt kameraya konuşuyor, parti"
+ },
+ {
+  "id": "C03111",
+  "bas": 3111.04,
+  "son": 3114.22,
+  "sure": 3.2,
+  "aciklama": "Partide dans, kamera"
+ },
+ {
+  "id": "C03114",
+  "bas": 3114.42,
+  "son": 3120.39,
+  "sure": 6.0,
+  "aciklama": "Matt kameraya bakıyor, kalabalık"
+ },
+ {
+  "id": "C03120",
+  "bas": 3120.59,
+  "son": 3169.82,
+  "sure": 49.2,
+  "aciklama": "Casey kamerasıyla, Matt'le konuşuyor ve gülüyor (+5-40)"
+ },
+ {
+  "id": "C03170",
+  "bas": 3170.02,
+  "son": 3212.15,
+  "sure": 42.1,
+  "aciklama": "+0-18 Steve koridorda gülüyor, +19-28 Monica ağzını silip çıkıyor (kusma sonrası), +30-41 Andrew eğilmiş, karanlık oda"
+ },
+ {
+  "id": "C03212",
+  "bas": 3212.73,
+  "son": 3215.61,
+  "sure": 2.9,
+  "aciklama": "Andrew karanlık odada yalnız"
+ },
+ {
+  "id": "C03218",
+  "bas": 3218.61,
+  "son": 3223.33,
+  "sure": 4.7,
+  "aciklama": "Andrew öfkeyle bağırıyor (Steve'i kovuyor)"
+ },
+ {
+  "id": "C03257",
+  "bas": 3257.77,
+  "son": 3349.9,
+  "sure": 92.1,
+  "aciklama": "+0-25 bodrum odası boş, +26-72 baba ile Andrew masada yüzleşiyor (kamera kutusu), +75-92 baba ayağa kalkıp saldırıyor"
+ },
+ {
+  "id": "C03375",
+  "bas": 3375.1,
+  "son": 3407.51,
+  "sure": 32.4,
+  "aciklama": "+3-23 Matt burnu kanıyor, mendille, Casey'nin evinde, +27-31 Matt yüzü bulanık, +32 Casey"
+ },
+ {
+  "id": "C03420",
+  "bas": 3420.31,
+  "son": 3424.24,
+  "sure": 3.9,
+  "aciklama": "Fırtına bulutu içinde Andrew (karanlık)"
+ },
+ {
+  "id": "C03424",
+  "bas": 3424.0,
+  "son": 3472.5,
+  "sure": 48.5,
+  "aciklama": "ELLE: Fırtına bulutlarında Andrew, kollarını açmış, kısa kesmeler (karanlık)"
+ },
+ {
+  "id": "C03441",
+  "bas": 3441.96,
+  "son": 3446.3,
+  "sure": 4.3,
+  "aciklama": "Fırtına bulutları, karanlık"
+ },
+ {
+  "id": "C03468",
+  "bas": 3468.86,
+  "son": 3470.53,
+  "sure": 1.7,
+  "aciklama": "Fırtına bulutunda Andrew, karanlık"
+ },
+ {
+  "id": "C03473",
+  "bas": 3473.0,
+  "son": 3477.5,
+  "sure": 4.5,
+  "aciklama": "ELLE: Yıldırım anı, aydınlanan bulut içinde düşen Steve"
+ },
+ {
+  "id": "C03479",
+  "bas": 3479.03,
+  "son": 3494.27,
+  "sure": 15.2,
+  "aciklama": "Mezarlıkta yürüyen bacaklar, çimen ve yapraklar"
+ },
+ {
+  "id": "C03494",
+  "bas": 3494.76,
+  "son": 3498.06,
+  "sure": 3.3,
+  "aciklama": "Cenazede çello çalınıyor"
+ },
+ {
+  "id": "C03498",
+  "bas": 3498.26,
+  "son": 3523.46,
+  "sure": 25.2,
+  "aciklama": "Cenaze kalabalığı, +14-25 Matt ve Casey"
+ },
+ {
+  "id": "C03523",
+  "bas": 3523.66,
+  "son": 3568.76,
+  "sure": 45.1,
+  "aciklama": "Mezarlık: +0-18 mezar taşları (Andrew'un kamerası), +24-44 Matt kameraya öfkeyle soruyor"
+ },
+ {
+  "id": "C03570",
+  "bas": 3570.63,
+  "son": 3600.08,
+  "sure": 29.5,
+  "aciklama": "Mezarlıkta Matt ve Andrew karşı karşıya, yukarıdan"
+ },
+ {
+  "id": "C03601",
+  "bas": 3601.11,
+  "son": 3611.8,
+  "sure": 10.7,
+  "aciklama": "Karanlıkta ayaklar"
+ },
+ {
+  "id": "C03611",
+  "bas": 3612.0,
+  "son": 3614.9,
+  "sure": 2.9,
+  "aciklama": "Steve'in anma köşesi: fotoğraf, oyuncak ayı, 'Friend' çerçevesi"
+ },
+ {
+  "id": "C03614",
+  "bas": 3614.1,
+  "son": 3625.36,
+  "sure": 11.3,
+  "aciklama": "Steve'in mezarı: çiçekler, fotoğraf, oyuncak ayı"
+ },
+ {
+  "id": "C03625",
+  "bas": 3625.56,
+  "son": 3633.66,
+  "sure": 8.1,
+  "aciklama": "Mezar toprağı, çiçekler, futbol topu"
+ },
+ {
+  "id": "C03633",
+  "bas": 3633.86,
+  "son": 3654.9,
+  "sure": 21.0,
+  "aciklama": "Andrew paltoyla çayırda Steve'in mezarına yürüyor (+0-3 çalılar), +12-21 yukarıdan"
+ },
+ {
+  "id": "C03700",
+  "bas": 3700.1,
+  "son": 3721.24,
+  "sure": 21.1,
+  "aciklama": "Okul koridoru: +0-12 öğrenciler, +14-21 Wayne diz çökmüş, ağzı kanlı (dişleri sökülmüş)"
+ },
+ {
+  "id": "C03721",
+  "bas": 3721.44,
+  "son": 3743.93,
+  "sure": 22.5,
+  "aciklama": "Tuvalette Andrew kanlı parmaklarında dişleri tutuyor (+0-3 bulanık)"
+ },
+ {
+  "id": "C03744",
+  "bas": 3744.13,
+  "son": 3749.69,
+  "sure": 5.6,
+  "aciklama": "Andrew tuvalette dişlerle"
+ },
+ {
+  "id": "C03749",
+  "bas": 3749.89,
+  "son": 3801.82,
+  "sure": 51.9,
+  "aciklama": "Hurdalıkta Andrew bağdaş kurmuş kameraya 'uç yırtıcı' konuşması (+9 apex, +26 aslan-ceylan)"
+ },
+ {
+  "id": "C03802",
+  "bas": 3802.02,
+  "son": 3814.79,
+  "sure": 12.8,
+  "aciklama": "Andrew'un odası, yatak, karanlık"
+ },
+ {
+  "id": "C03814",
+  "bas": 3814.99,
+  "son": 3839.9,
+  "sure": 24.9,
+  "aciklama": "Andrew'un odasında Matt yüzleşiyor (+3 'kuralları çiğneyecek misin'), +12-25 tartışma, itiş"
+ },
+ {
+  "id": "C03865",
+  "bas": 3865.1,
+  "son": 3876.4,
+  "sure": 11.3,
+  "aciklama": "Annenin odası, anne yatakta zor nefes alıyor, Andrew kamerayla"
+ },
+ {
+  "id": "C03876",
+  "bas": 3876.6,
+  "son": 3879.15,
+  "sure": 2.6,
+  "aciklama": "Eczane rafları, alçak açı"
+ },
+ {
+  "id": "C03879",
+  "bas": 3879.35,
+  "son": 3919.9,
+  "sure": 40.5,
+  "aciklama": "+0-18 eczacı önlüğü ve ilaç rafları (750 dolar), +23-40 pencereden kırmızı araba (kullanma)"
+ },
+ {
+  "id": "C03920",
+  "bas": 3920.1,
+  "son": 3972.74,
+  "sure": 52.6,
+  "aciklama": "Andrew odada çanta hazırlıyor, +36-52 babasının itfaiyeci kıyafetini ve maskesini giyiyor"
+ },
+ {
+  "id": "C03972",
+  "bas": 3972.94,
+  "son": 4039.81,
+  "sure": 66.9,
+  "aciklama": "+0-25 parkta serseriler, +29 koşan itfaiyeci kıyafetli Andrew, +44-66 yerde serilmiş serseriler (yukarıdan)"
+ },
+ {
+  "id": "C04040",
+  "bas": 4040.01,
+  "son": 4058.83,
+  "sure": 18.8,
+  "aciklama": "İtfaiyeci kıyafetli Andrew parayı sayıyor"
+ },
+ {
+  "id": "C04059",
+  "bas": 4059.03,
+  "son": 4069.26,
+  "sure": 10.2,
+  "aciklama": "Gece benzin istasyonu dükkanına giren itfaiyeci kıyafetli Andrew"
+ },
+ {
+  "id": "C04069",
+  "bas": 4069.46,
+  "son": 4070.97,
+  "sure": 1.5,
+  "aciklama": "Güvenlik kamerası: dükkan, soygun"
+ },
+ {
+  "id": "C04071",
+  "bas": 4071.17,
+  "son": 4084.61,
+  "sure": 13.4,
+  "aciklama": "Dükkan kasasında itfaiyeci kıyafetli Andrew çantayla"
+ },
+ {
+  "id": "C04087",
+  "bas": 4087.73,
+  "son": 4090.53,
+  "sure": 2.8,
+  "aciklama": "Gece benzin pompaları yanında Andrew"
+ },
+ {
+  "id": "C04094",
+  "bas": 4094.9,
+  "son": 4099.5,
+  "sure": 4.6,
+  "aciklama": "Güvenlik kamerası: benzin istasyonu patlıyor, alevler"
+ },
+ {
+  "id": "C04100",
+  "bas": 4100.45,
+  "son": 4105.5,
+  "sure": 5.1,
+  "aciklama": "Hastane koridoru güvenlik kamerası, doktorlar"
+ },
+ {
+  "id": "C04105",
+  "bas": 4105.7,
+  "son": 4108.21,
+  "sure": 2.5,
+  "aciklama": "Hastane koridoru, polis bekliyor"
+ },
+ {
+  "id": "C04108",
+  "bas": 4108.41,
+  "son": 4116.3,
+  "sure": 7.9,
+  "aciklama": "Hastane koridoru, polisler kapıda"
+ },
+ {
+  "id": "C04116",
+  "bas": 4116.5,
+  "son": 4128.32,
+  "sure": 11.8,
+  "aciklama": "Andrew hastane yatağında, başı ve kolları sargılı"
+ },
+ {
+  "id": "C04128",
+  "bas": 4128.52,
+  "son": 4131.49,
+  "sure": 3.0,
+  "aciklama": "Hastane odası güvenlik kamerası, siyah giyimli kişi"
+ },
+ {
+  "id": "C04131",
+  "bas": 4131.69,
+  "son": 4137.16,
+  "sure": 5.5,
+  "aciklama": "Hastane yatağı, önde karanlık silüet"
+ },
+ {
+  "id": "C04137",
+  "bas": 4137.36,
+  "son": 4148.0,
+  "sure": 10.6,
+  "aciklama": "Hastane odası güvenlik kamerası, baba giriyor"
+ },
+ {
+  "id": "C04148",
+  "bas": 4148.2,
+  "son": 4238.51,
+  "sure": 90.3,
+  "aciklama": "Andrew yatakta, babası başında konuşuyor (+28 'annen öldü', +87 'senin suçun')"
+ },
+ {
+  "id": "C04238",
+  "bas": 4238.71,
+  "son": 4242.81,
+  "sure": 4.1,
+  "aciklama": "Güvenlik kamerası: baba Andrew'un üzerine eğiliyor"
+ },
+ {
+  "id": "C04243",
+  "bas": 4243.01,
+  "son": 4248.77,
+  "sure": 5.8,
+  "aciklama": "Andrew yatakta sargılı, yakın"
+ },
+ {
+  "id": "C04248",
+  "bas": 4248.97,
+  "son": 4250.81,
+  "sure": 1.8,
+  "aciklama": "Hastane odası duman ve toz (patlama)"
+ },
+ {
+  "id": "C04251",
+  "bas": 4251.01,
+  "son": 4306.41,
+  "sure": 55.4,
+  "aciklama": "Casey'nin doğum günü: +0-12 parti, +14-28 Matt burnu kanıyor mendille, +36-45 TV haberi (tahliye), +50-55 Matt arabaya koşuyor"
+ },
+ {
+  "id": "C04306",
+  "bas": 4306.61,
+  "son": 4311.33,
+  "sure": 4.7,
+  "aciklama": "Gece araba, kırmızı ışık"
+ },
+ {
+  "id": "C04311",
+  "bas": 4311.74,
+  "son": 4314.29,
+  "sure": 2.6,
+  "aciklama": "Matt gece araba sürüyor, telaşlı"
+ },
+ {
+  "id": "C04315",
+  "bas": 4315.79,
+  "son": 4327.47,
+  "sure": 11.7,
+  "aciklama": "Gece Seattle'a giden yol, Space Needle uzakta"
+ },
+ {
+  "id": "C04327",
+  "bas": 4327.67,
+  "son": 4333.69,
+  "sure": 6.0,
+  "aciklama": "Hastane önünde polis arabaları ve kalabalık"
+ },
+ {
+  "id": "C04334",
+  "bas": 4334.43,
+  "son": 4359.51,
+  "sure": 25.1,
+  "aciklama": "Hastane önü: +8-15 Matt yukarı bakıyor, +16-23 duvar patlıyor, Andrew babasını dumanda havada tutuyor"
+ },
+ {
+  "id": "C04360",
+  "bas": 4360.16,
+  "son": 4370.47,
+  "sure": 10.3,
+  "aciklama": "+0-5 hastane binasında delik, +6-10 Matt sokakta Richard'ı yakalamış"
+ },
+ {
+  "id": "C04373",
+  "bas": 4373.09,
+  "son": 4376.19,
+  "sure": 3.1,
+  "aciklama": "Gece araba kapısı"
+ },
+ {
+  "id": "C04376",
+  "bas": 4376.76,
+  "son": 4386.62,
+  "sure": 9.9,
+  "aciklama": "Gece araba içinden şehir"
+ },
+ {
+  "id": "C04387",
+  "bas": 4387.11,
+  "son": 4399.9,
+  "sure": 12.8,
+  "aciklama": "Gece şehir sokağı, +3 sokakta patlama/alev"
+ },
+ {
+  "id": "C04400",
+  "bas": 4400.1,
+  "son": 4424.65,
+  "sure": 24.6,
+  "aciklama": "Gece Seattle havadan; +8-15 Space Needle, +17-24 yeşil ışık sütunları"
+ },
+ {
+  "id": "C04426",
+  "bas": 4426.52,
+  "son": 4431.04,
+  "sure": 4.5,
+  "aciklama": "Yeşil ışık içinde havada figür"
+ },
+ {
+  "id": "C04435",
+  "bas": 4435.95,
+  "son": 4437.62,
+  "sure": 1.7,
+  "aciklama": "Bulanık geçiş, yeşil ışık"
+ },
+ {
+  "id": "C04439",
+  "bas": 4439.99,
+  "son": 4450.26,
+  "sure": 10.3,
+  "aciklama": "Polis arabaları havada, gece"
+ },
+ {
+  "id": "C04451",
+  "bas": 4451.59,
+  "son": 4459.27,
+  "sure": 7.7,
+  "aciklama": "Andrew yüzü, arkada Space Needle"
+ },
+ {
+  "id": "C04459",
+  "bas": 4459.47,
+  "son": 4473.2,
+  "sure": 13.7,
+  "aciklama": "Polis helikopteri hedef ekranı, Space Needle"
+ },
+ {
+  "id": "C04473",
+  "bas": 4473.4,
+  "son": 4483.13,
+  "sure": 9.7,
+  "aciklama": "Andrew bina cephesinde, yaralı, hastane önlüğü"
+ },
+ {
+  "id": "C04483",
+  "bas": 4483.33,
+  "son": 4486.92,
+  "sure": 3.6,
+  "aciklama": "Helikopter hedef ekranı, Space Needle"
+ },
+ {
+  "id": "C04488",
+  "bas": 4488.17,
+  "son": 4490.55,
+  "sure": 2.4,
+  "aciklama": "Andrew havada, cam kırıkları, gökdelenler"
+ },
+ {
+  "id": "C04491",
+  "bas": 4491.75,
+  "son": 4493.64,
+  "sure": 1.9,
+  "aciklama": "Andrew kolunu savuruyor"
+ },
+ {
+  "id": "C04493",
+  "bas": 4493.84,
+  "son": 4498.14,
+  "sure": 4.3,
+  "aciklama": "Hedef ekranı, Space Needle tepesi"
+ },
+ {
+  "id": "C04498",
+  "bas": 4498.34,
+  "son": 4500.44,
+  "sure": 2.1,
+  "aciklama": "Andrew Space Needle üstünde, polisler"
+ },
+ {
+  "id": "C04501",
+  "bas": 4501.31,
+  "son": 4503.82,
+  "sure": 2.5,
+  "aciklama": "Matt şehir üstünde bağırıyor"
+ },
+ {
+  "id": "C04504",
+  "bas": 4504.06,
+  "son": 4506.32,
+  "sure": 2.3,
+  "aciklama": "Andrew öfkeyle eğilmiş, uçan kameralar"
+ },
+ {
+  "id": "C04506",
+  "bas": 4506.52,
+  "son": 4511.74,
+  "sure": 5.2,
+  "aciklama": "Andrew yakın, Space Needle ışıkları"
+ },
+ {
+  "id": "C04521",
+  "bas": 4521.78,
+  "son": 4523.38,
+  "sure": 1.6,
+  "aciklama": "Andrew Space Needle'dan düşüyor"
+ },
+ {
+  "id": "C04525",
+  "bas": 4525.12,
+  "son": 4529.13,
+  "sure": 4.0,
+  "aciklama": "Hedef ekranı: şehir üstünde iki uçan figür"
+ },
+ {
+  "id": "C04529",
+  "bas": 4529.33,
+  "son": 4533.14,
+  "sure": 3.8,
+  "aciklama": "Matt mavi ışıkta, havada"
+ },
+ {
+  "id": "C04533",
+  "bas": 4533.34,
+  "son": 4534.89,
+  "sure": 1.6,
+  "aciklama": "Andrew yüzü kanlı, kamera uçuyor"
+ },
+ {
+  "id": "C04536",
+  "bas": 4536.42,
+  "son": 4538.6,
+  "sure": 2.2,
+  "aciklama": "Andrew kanlı yüz, Space Needle önünde"
+ },
+ {
+  "id": "C04538",
+  "bas": 4538.8,
+  "son": 4540.39,
+  "sure": 1.6,
+  "aciklama": "Matt yakın, gökdelenler"
+ },
+ {
+  "id": "C04543",
+  "bas": 4543.43,
+  "son": 4546.28,
+  "sure": 2.8,
+  "aciklama": "Matt parlak ışıkta, bulanık"
+ },
+ {
+  "id": "C04546",
+  "bas": 4546.48,
+  "son": 4548.28,
+  "sure": 1.8,
+  "aciklama": "Andrew acı içinde"
+ },
+ {
+  "id": "C04548",
+  "bas": 4548.48,
+  "son": 4550.2,
+  "sure": 1.7,
+  "aciklama": "Matt'in tişörtü (Nostromo), gece"
+ },
+ {
+  "id": "C04550",
+  "bas": 4550.4,
+  "son": 4553.03,
+  "sure": 2.6,
+  "aciklama": "Andrew Space Needle üstünde ayakta"
+ },
+ {
+  "id": "C04554",
+  "bas": 4554.86,
+  "son": 4561.58,
+  "sure": 6.7,
+  "aciklama": "Andrew kanlı yüz, öfkeli"
+ },
+ {
+  "id": "C04561",
+  "bas": 4561.78,
+  "son": 4565.92,
+  "sure": 4.1,
+  "aciklama": "Andrew Space Needle üstünde, kolu sargılı"
+ },
+ {
+  "id": "C04567",
+  "bas": 4567.25,
+  "son": 4568.9,
+  "sure": 1.7,
+  "aciklama": "Otobüs hızla geçiyor, bulanık"
+ },
+ {
+  "id": "C04568",
+  "bas": 4568.1,
+  "son": 4589.65,
+  "sure": 21.6,
+  "aciklama": "+3-5 şehir binaları, +7-21 yaralı Andrew yerde sürünüyor (karanlık)"
+ },
+ {
+  "id": "C04590",
+  "bas": 4590.1,
+  "son": 4592.28,
+  "sure": 2.2,
+  "aciklama": "Bina cephesi hızla geçiyor (uçuş)"
+ },
+ {
+  "id": "C04592",
+  "bas": 4592.48,
+  "son": 4594.7,
+  "sure": 2.2,
+  "aciklama": "Siyah-beyaz güvenlik kamerası, banka lobisi"
+ },
+ {
+  "id": "C04594",
+  "bas": 4594.9,
+  "son": 4600.25,
+  "sure": 5.3,
+  "aciklama": "Cam kırıkları, bulanık"
+ },
+ {
+  "id": "C04600",
+  "bas": 4600.45,
+  "son": 4637.45,
+  "sure": 37.0,
+  "aciklama": "+0-17 bina/ofis içinden geçiş, +21-24 bina cephesinde figür, +28-32 sokak, +36 helikopter ekranı"
+ },
+ {
+  "id": "C04637",
+  "bas": 4637.65,
+  "son": 4640.79,
+  "sure": 3.1,
+  "aciklama": "Matt yakın, bulanık, eğilmiş"
+ },
+ {
+  "id": "C04640",
+  "bas": 4640.99,
+  "son": 4647.33,
+  "sure": 6.3,
+  "aciklama": "Matt yakın, bulanık"
+ },
+ {
+  "id": "C04647",
+  "bas": 4647.53,
+  "son": 4649.71,
+  "sure": 2.2,
+  "aciklama": "Helikopter ekranı: devrilmiş araba üstünde figür"
+ },
+ {
+  "id": "C04650",
+  "bas": 4650.91,
+  "son": 4653.3,
+  "sure": 2.4,
+  "aciklama": "Matt kanlı yüz bağırıyor"
+ },
+ {
+  "id": "C04653",
+  "bas": 4653.5,
+  "son": 4655.22,
+  "sure": 1.7,
+  "aciklama": "Helikopter ekranı: devrilmiş araba, yerde figür"
+ },
+ {
+  "id": "C04655",
+  "bas": 4655.42,
+  "son": 4657.64,
+  "sure": 2.2,
+  "aciklama": "Matt eğilmiş, yaralı"
+ },
+ {
+  "id": "C04657",
+  "bas": 4657.84,
+  "son": 4660.06,
+  "sure": 2.2,
+  "aciklama": "Gece sokak, polis arabası geliyor, devrilmiş araçlar"
+ },
+ {
+  "id": "C04660",
+  "bas": 4660.26,
+  "son": 4662.56,
+  "sure": 2.3,
+  "aciklama": "Polis ışıkları, bulanık"
+ },
+ {
+  "id": "C04662",
+  "bas": 4662.76,
+  "son": 4664.48,
+  "sure": 1.7,
+  "aciklama": "Polis arabası, devrilmiş araç"
+ },
+ {
+  "id": "C04664",
+  "bas": 4664.68,
+  "son": 4666.48,
+  "sure": 1.8,
+  "aciklama": "Matt kollarını kaldırmış, bulanık"
+ },
+ {
+  "id": "C04666",
+  "bas": 4666.68,
+  "son": 4671.23,
+  "sure": 4.6,
+  "aciklama": "Helikopter ekranı: sokak, polis arabaları"
+ },
+ {
+  "id": "C04671",
+  "bas": 4671.43,
+  "son": 4677.45,
+  "sure": 6.0,
+  "aciklama": "Andrew yerde yatıyor, kanlı kol"
+ },
+ {
+  "id": "C04678",
+  "bas": 4678.27,
+  "son": 4682.12,
+  "sure": 3.8,
+  "aciklama": "Andrew yerde, kanlı el"
+ },
+ {
+  "id": "C04682",
+  "bas": 4682.32,
+  "son": 4686.87,
+  "sure": 4.6,
+  "aciklama": "Andrew sokakta yerde sürünüyor, hastane önlüğü"
+ },
+ {
+  "id": "C04687",
+  "bas": 4687.07,
+  "son": 4689.08,
+  "sure": 2.0,
+  "aciklama": "Polis arabası, Matt kollarını açmış, Andrew yerde"
+ },
+ {
+  "id": "C04690",
+  "bas": 4690.7,
+  "son": 4694.13,
+  "sure": 3.4,
+  "aciklama": "Çalılar, bulanık figür"
+ },
+ {
+  "id": "C04694",
+  "bas": 4694.33,
+  "son": 4696.17,
+  "sure": 1.8,
+  "aciklama": "Kanlı eller, kot pantolon, cam kırıkları"
+ },
+ {
+  "id": "C04698",
+  "bas": 4698.71,
+  "son": 4702.64,
+  "sure": 3.9,
+  "aciklama": "Helikopter ekranı: çatı"
+ },
+ {
+  "id": "C04702",
+  "bas": 4702.84,
+  "son": 4705.98,
+  "sure": 3.1,
+  "aciklama": "Karanlık bina"
+ },
+ {
+  "id": "C04706",
+  "bas": 4706.18,
+  "son": 4708.1,
+  "sure": 1.9,
+  "aciklama": "Bina yanında kıvılcımlar"
+ },
+ {
+  "id": "C04708",
+  "bas": 4708.97,
+  "son": 4718.03,
+  "sure": 9.1,
+  "aciklama": "Helikopter ekranı: meydan, insanlar koşuyor"
+ },
+ {
+  "id": "C04719",
+  "bas": 4719.06,
+  "son": 4725.04,
+  "sure": 6.0,
+  "aciklama": "Gece polis ve SWAT silah doğrultuyor"
+ },
+ {
+  "id": "C04726",
+  "bas": 4726.7,
+  "son": 4728.92,
+  "sure": 2.2,
+  "aciklama": "Helikopter ekranı: meydan, polis arabaları"
+ },
+ {
+  "id": "C04729",
+  "bas": 4729.12,
+  "son": 4733.8,
+  "sure": 4.7,
+  "aciklama": "SWAT polisi silahla, bulanık"
+ },
+ {
+  "id": "C04733",
+  "bas": 4734.0,
+  "son": 4737.22,
+  "sure": 3.2,
+  "aciklama": "Yerde kanlı figür, bulanık"
+ },
+ {
+  "id": "C04737",
+  "bas": 4737.42,
+  "son": 4744.01,
+  "sure": 6.6,
+  "aciklama": "Andrew yerde sürünüyor, kırmızı lazer noktaları (vurulmuş)"
+ },
+ {
+  "id": "C04744",
+  "bas": 4744.21,
+  "son": 4746.22,
+  "sure": 2.0,
+  "aciklama": "Meydanda yerde kıvrılmış Andrew"
+ },
+ {
+  "id": "C04746",
+  "bas": 4746.42,
+  "son": 4749.1,
+  "sure": 2.7,
+  "aciklama": "Matt yaralı yüz, yakın"
+ },
+ {
+  "id": "C04749",
+  "bas": 4749.3,
+  "son": 4751.15,
+  "sure": 1.8,
+  "aciklama": "Kanlı kol, bulanık"
+ },
+ {
+  "id": "C04751",
+  "bas": 4751.35,
+  "son": 4754.48,
+  "sure": 3.1,
+  "aciklama": "Matt eliyle yüzünü siliyor"
+ },
+ {
+  "id": "C04754",
+  "bas": 4754.68,
+  "son": 4757.49,
+  "sure": 2.8,
+  "aciklama": "Polis arabası arkada, karanlık siluet"
+ },
+ {
+  "id": "C04757",
+  "bas": 4757.69,
+  "son": 4761.2,
+  "sure": 3.5,
+  "aciklama": "Hareketli bulanık figür"
+ },
+ {
+  "id": "C04761",
+  "bas": 4761.4,
+  "son": 4766.5,
+  "sure": 5.1,
+  "aciklama": "Matt bağırıyor ('onlara zarar verme'), bulanık"
+ },
+ {
+  "id": "C04766",
+  "bas": 4766.7,
+  "son": 4769.5,
+  "sure": 2.8,
+  "aciklama": "Andrew kanlı kolunu kaldırmış, arkada polis arabası ve polisler"
+ },
+ {
+  "id": "C04769",
+  "bas": 4769.7,
+  "son": 4772.29,
+  "sure": 2.6,
+  "aciklama": "Helikopter ekranı: meydanda figür"
+ },
+ {
+  "id": "C04775",
+  "bas": 4775.54,
+  "son": 4778.13,
+  "sure": 2.6,
+  "aciklama": "Bulanık koşan figür"
+ },
+ {
+  "id": "C04778",
+  "bas": 4778.33,
+  "son": 4779.88,
+  "sure": 1.6,
+  "aciklama": "Haber kamerası yukarıdan: meydan, polis arabaları, 'Downtown High Alert'"
+ },
+ {
+  "id": "C04780",
+  "bas": 4780.08,
+  "son": 4783.76,
+  "sure": 3.7,
+  "aciklama": "Andrew kollarını açmış bağırıyor, kanlı (öfke)"
+ },
+ {
+  "id": "C04785",
+  "bas": 4785.21,
+  "son": 4788.81,
+  "sure": 3.6,
+  "aciklama": "Helikopter ekranı: meydanda polis arabaları savruluyor"
+ },
+ {
+  "id": "C04789",
+  "bas": 4789.01,
+  "son": 4794.44,
+  "sure": 5.4,
+  "aciklama": "Meydanda yerde Andrew, polis arabaları"
+ },
+ {
+  "id": "C04794",
+  "bas": 4794.64,
+  "son": 4798.53,
+  "sure": 3.9,
+  "aciklama": "Andrew meydanda ayakta, bina önü"
+ },
+ {
+  "id": "C04798",
+  "bas": 4798.73,
+  "son": 4816.0,
+  "sure": 17.3,
+  "aciklama": "Matt ağlayarak bağırıyor ('dur!'), +17 bina"
+ },
+ {
+  "id": "C04817",
+  "bas": 4817.91,
+  "son": 4826.1,
+  "sure": 8.2,
+  "aciklama": "Mızraklı heykel"
+ },
+ {
+  "id": "C04826",
+  "bas": 4826.3,
+  "son": 4827.85,
+  "sure": 1.6,
+  "aciklama": "Yukarıdan: heykel, mızrak havada, Andrew"
+ },
+ {
+  "id": "C04829",
+  "bas": 4829.3,
+  "son": 4836.52,
+  "sure": 7.2,
+  "aciklama": "Andrew yerde yakın, karanlık"
+ },
+ {
+  "id": "C04836",
+  "bas": 4836.72,
+  "son": 4843.2,
+  "sure": 6.5,
+  "aciklama": "Araba içinden heykel kaidesi"
+ },
+ {
+  "id": "C04843",
+  "bas": 4843.4,
+  "son": 4846.2,
+  "sure": 2.8,
+  "aciklama": "Heykelin dibinde yerde yatan Andrew"
+ },
+ {
+  "id": "C04846",
+  "bas": 4846.4,
+  "son": 4852.91,
+  "sure": 6.5,
+  "aciklama": "Helikopter ekranı: ışık hüzmesinde yükselen figür (Matt uçuyor)"
+ },
+ {
+  "id": "C04853",
+  "bas": 4853.11,
+  "son": 4857.38,
+  "sure": 4.3,
+  "aciklama": "SWAT polisleri koşuyor, gölgeler"
+ },
+ {
+  "id": "C04857",
+  "bas": 4857.58,
+  "son": 4864.13,
+  "sure": 6.6,
+  "aciklama": "Ölü Andrew'un yüzü, kanlı, yerde"
+ },
+ {
+  "id": "C04867",
+  "bas": 4867.59,
+  "son": 4874.98,
+  "sure": 7.4,
+  "aciklama": "Okyanus üzerinde uçuş"
+ },
+ {
+  "id": "C04875",
+  "bas": 4875.18,
+  "son": 4879.82,
+  "sure": 4.6,
+  "aciklama": "Kahverengi tepeler üzerinde uçuş"
+ },
+ {
+  "id": "C04880",
+  "bas": 4880.02,
+  "son": 4885.36,
+  "sure": 5.3,
+  "aciklama": "Bulutların arasında uçuş, mavi gökyüzü"
+ },
+ {
+  "id": "C04887",
+  "bas": 4887.19,
+  "son": 4891.2,
+  "sure": 4.0,
+  "aciklama": "Karlı sarp dağlar"
+ },
+ {
+  "id": "C04891",
+  "bas": 4891.4,
+  "son": 4907.26,
+  "sure": 15.9,
+  "aciklama": "Tibet: karlı vadi, +5-15 sırt çantalı Matt beliriyor"
+ },
+ {
+  "id": "C04907",
+  "bas": 4907.46,
+  "son": 4936.25,
+  "sure": 28.8,
+  "aciklama": "Tibet: Matt kameraya konuşuyor, kamerayı yerleştiriyor (+17 'üzgünüm')"
+ },
+ {
+  "id": "C04936",
+  "bas": 4936.45,
+  "son": 5019.9,
+  "sure": 83.5,
+  "aciklama": "Tibet: Matt kameraya konuşuyor (+1 'kötü biri değilsin', +13 'insanlara yardım', +23 'senin ve Steve için', +33 'seni seviyorum'), +64-83 manastıra doğru yürüyüp uzaklaşıyor"
+ }
+]

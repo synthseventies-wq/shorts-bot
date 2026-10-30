@@ -3,3 +3,14 @@ filmler/
 *.mp4
 *.srt
 __pycache__/
+ELEVENLABS_API.txt
+.env
+ozetler/*/ses/
+ozetler/*/ses_*/
+ozetler/*/analiz_onbellek.json
+ozetler/*/*.plan.json
+ozetler/*/katalog/kareler/
+ozetler/*/katalog/*.jpg
+ozetler/*/katalog/analiz_onbellek.json
+ozetler/*/kurgu_onbellek/
+ozetler/*/kurgu_*/

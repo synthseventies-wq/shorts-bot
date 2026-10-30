@@ -43,7 +43,7 @@ Tünelin sonunda karşılarına parlayan, renk değiştiren devasa bir kristal y
 
 ## [S09] 00:14:21-00:15:41 · Üç hafta sonra
 
-Görüntüler geri geldiğinde aradan birkaç hafta geçmiştir. Üç arkadaş bir odada birbirine top atmaktadır. Ancak bu sıradan bir oyun değildir. Atılan top, Matt'in yüzüne çarpmadan hemen önce havada durur. O gece yerin altında bir şey olmuş ve üçü de telekinezi, yani düşünce gücüyle eşyaları hareket ettirme yeteneği kazanmıştır.
+Görüntüler geri geldiğinde aradan birkaç hafta geçmiştir. Üç arkadaş bir bahçede birbirine top atmaktadır. Ancak bu sıradan bir oyun değildir. Atılan top, Matt'in yüzüne çarpmadan hemen önce havada durur. O gece yerin altında bir şey olmuş ve üçü de telekinezi, yani düşünce gücüyle eşyaları hareket ettirme yeteneği kazanmıştır.
 
 ## [S10] 00:15:41-00:16:53 · Güçleri keşfetmek
 
